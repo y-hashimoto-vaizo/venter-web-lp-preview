@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>コーポレートサイトの刷新、あきらめていませんか。｜V/ENTER WEB</title>
-<meta name="description" content="法人向けコーポレートサイト・採用サイトの制作と、公開後のAI運用同梱。TOP25万円・下層5万/頁・月3万円。AIが下書きを作り、公開・送信前は必ず人が最終確認します。V/ENTER WEB（株式会社VAIZO）。">
+<title>中小企業のコーポレート・採用サイト制作 25万円から ｜ V/ENTER WEB（株式会社VAIZO）</title>
+<meta name="description" content="法人向けコーポレート・採用サイト制作。TOP 25 万円・下層 5 万円/頁・月額 3 万円で AI 同梱の運用までお引き受けします。実績ゼロからの初期パートナー価格。V/ENTER WEB（株式会社 VAIZO）。">
 <!--
   ============================================================
   V/ENTER WEB LP v7 / 2026-05-27
@@ -204,10 +204,16 @@
     .hero-art .chip .ic{width:20px;height:20px;}
   }
 
-  /* ===== 2. AI同梱バンド (全幅黒背景・公開/後悔ダブルミーニング) ===== */
-  .ai-band{background:var(--ink);color:var(--paper);padding:104px 0;position:relative;overflow:hidden;}
-  .ai-band::before{content:"";position:absolute;right:6%;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.32) 0%,transparent 70%);pointer-events:none;}
-  .ai-band::after{content:"";position:absolute;left:-120px;bottom:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.16) 0%,transparent 70%);pointer-events:none;}
+  /* ===== 2. AI同梱バンド (シンプル黒〜暗茶) ===== */
+  .ai-band{
+    color:var(--paper);
+    padding:104px 0;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(180deg, #0E0E0E 0%, #1A1410 100%);
+  }
+  .ai-band::before{content:"";position:absolute;right:6%;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.20) 0%,transparent 70%);pointer-events:none;}
+  .ai-band::after{content:"";position:absolute;left:-120px;bottom:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.12) 0%,transparent 70%);pointer-events:none;}
   .ai-band .inner{position:relative;z-index:1;}
   .ai-band .wrap{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:start;}
   .ai-band .label{font-size:11px;letter-spacing:.24em;font-weight:700;color:#FF8A5E;text-transform:uppercase;writing-mode:vertical-rl;text-orientation:mixed;padding-right:16px;}
@@ -243,20 +249,28 @@
   /* AI Ops: フィーチャー(背景をオレンジ薄に変えるだけ、ボックス感は出さない) */
   .svc.featured{background:rgba(232,93,47,.06);}
   .svc.featured:hover{background:rgba(232,93,47,.10);}
-  .svc.featured .badge-feat{position:absolute;top:24px;right:36px;color:var(--orange);font-size:10px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;border-bottom:2px solid var(--orange);padding-bottom:3px;}
+  /* .svc.featured .badge-feat 削除済(v9) */
   @media(max-width:860px){
     .svc-row{grid-template-columns:1fr;}
     .svc{border-right:none;border-bottom:1px solid var(--line);}
     .svc:last-child{border-bottom:none;}
   }
 
-  /* ===== 4. Problems: 経営者の生の声(フキダシ・傾き) ===== */
-  .problems{padding:128px 0 112px;background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;}
+  /* ===== 4. Problems: 経営者の生の声(フキダシ・傾き＋hover/scrollで拡大) ===== */
+  .problems .sub-note{text-align:center;font-size:13px;color:var(--sub);margin-top:-48px;margin-bottom:48px;letter-spacing:.04em;}
+  .prob .avatar .case-label{font-size:10px;color:var(--sub);background:var(--soft);padding:2px 7px;border-radius:99px;letter-spacing:.04em;font-weight:600;margin-left:auto;}
+  .problems{padding:128px 0 180px;background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:visible;}
   .problems .head{max-width:38em;margin:0 auto 72px;text-align:center;}
   .prob-cloud{position:relative;margin:0 auto;min-height:560px;}
-  .prob{background:var(--paper);border-radius:22px;padding:28px 30px 24px;border:1px solid var(--line);box-shadow:0 18px 42px rgba(0,0,0,.08);position:absolute;width:340px;display:flex;flex-direction:column;gap:12px;transition:transform .35s cubic-bezier(.34,1.56,.64,1);}
-  .prob::after{content:"";position:absolute;width:24px;height:24px;background:var(--paper);border-right:1px solid var(--line);border-bottom:1px solid var(--line);bottom:-12px;}
-  .prob:hover{transform:rotate(0deg) scale(1.03)!important;z-index:10;}
+  .prob{background:var(--paper);border-radius:22px;padding:28px 30px 24px;border:1px solid var(--line);box-shadow:0 18px 42px rgba(0,0,0,.08);position:absolute;width:340px;display:flex;flex-direction:column;gap:12px;transition:transform .55s cubic-bezier(.34,1.56,.64,1),box-shadow .55s cubic-bezier(.4,0,.2,1),filter .55s;cursor:pointer;}
+  .prob::after{content:"";position:absolute;width:24px;height:24px;background:var(--paper);border-right:1px solid var(--line);border-bottom:1px solid var(--line);bottom:-12px;transition:transform .55s cubic-bezier(.34,1.56,.64,1);}
+  /* 拡大状態(hoverまたはモバイルでscrollspyが当てる .is-focused) */
+  .prob:hover,.prob.is-focused{transform:rotate(0deg) scale(1.5)!important;z-index:30;box-shadow:0 40px 90px rgba(0,0,0,.28),0 12px 24px rgba(0,0,0,.12);}
+  /* p2は translateX(-50%) を保持 */
+  .prob.p2:hover,.prob.p2.is-focused{transform:translateX(-50%) rotate(0deg) scale(1.5)!important;}
+  /* 兄弟のフェードアウトでスポットライト感 */
+  .prob-cloud:hover .prob:not(:hover){filter:saturate(.4) opacity(.55);transform:scale(.96) rotate(var(--tilt))!important;}
+  .prob-cloud:hover .prob.p2:not(:hover){transform:translateX(-50%) scale(.96) rotate(var(--tilt))!important;}
   .prob .avatar{display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px dashed var(--line);}
   .prob .avatar .av{width:36px;height:36px;border-radius:50%;background:var(--orange-soft);color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;}
   .prob .avatar .meta{display:flex;flex-direction:column;line-height:1.3;}
@@ -284,31 +298,24 @@
     .prob.p2{transform:rotate(var(--tilt))!important;}
   }
 
-  /* ===== 5. Stance: マニフェスト型(装飾全廃・型の力だけ) ===== */
-  .stance{padding:180px 0 200px;background:var(--paper);}
-  .stance .eyeb{font-size:11px;color:var(--orange);letter-spacing:.32em;font-weight:800;text-transform:uppercase;margin-bottom:60px;display:inline-flex;align-items:center;gap:14px;}
+  /* ===== 5. Stance (v9 再構築: h2のみ・annotなし・明朝なし) ===== */
+  .stance{padding:140px 0 120px;background:var(--paper);}
+  .stance .eyeb{font-size:11px;color:var(--orange);letter-spacing:.32em;font-weight:800;text-transform:uppercase;margin-bottom:48px;display:inline-flex;align-items:center;gap:14px;}
   .stance .eyeb::before{content:"";width:48px;height:1.5px;background:var(--orange);}
-  .stance .punch{font-weight:900;font-size:clamp(38px,6.4vw,96px);line-height:1.22;letter-spacing:-.03em;color:var(--ink);margin:0;}
-  .stance .punch .ser{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-style:italic;font-weight:600;color:var(--orange);}
+  .stance .punch{font-weight:900;font-size:clamp(28px,3.8vw,48px);line-height:1.6;letter-spacing:-.015em;color:var(--ink);margin:0;}
+  .stance .punch .ser{color:var(--orange);}
   .stance .punch .ul{position:relative;display:inline-block;}
-  .stance .punch .ul::after{content:"";position:absolute;left:-6px;right:-6px;bottom:8px;height:18px;background:var(--yellow);z-index:-1;transform:skewX(-3deg);}
-  .stance .punch .nw{color:var(--orange);}
-  .stance .annot{margin-top:88px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);}
-  .stance .annot .a{padding:28px 36px 0 0;border-right:1px solid var(--line);}
-  .stance .annot .a:last-child{border-right:none;padding-right:0;}
-  .stance .annot .a:not(:first-child){padding-left:36px;}
-  .stance .annot .a .num{font-size:clamp(28px,3.4vw,42px);font-weight:900;letter-spacing:-.02em;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;margin-bottom:14px;}
-  .stance .annot .a .num .y{color:var(--orange);}
-  .stance .annot .a .num .u{font-size:.5em;color:var(--sub);font-weight:600;margin-left:4px;}
-  .stance .annot .a p{font-size:14px;color:var(--sub);line-height:1.95;}
-  .stance .annot .a p b{color:var(--ink);font-weight:700;}
-  @media(max-width:860px){
-    .stance{padding:120px 0 140px;}
-    .stance .annot{grid-template-columns:1fr;gap:0;}
-    .stance .annot .a{border-right:none;border-bottom:1px solid var(--line);padding:22px 0;}
-    .stance .annot .a:not(:first-child){padding-left:0;padding-top:22px;}
-    .stance .annot .a:last-child{border-bottom:none;}
-  }
+  .stance .punch .ul::after{content:"";position:absolute;left:-6px;right:-6px;bottom:6px;height:16px;background:var(--yellow);z-index:-1;transform:skewX(-3deg);}
+
+  /* ===== 8. Materials (Stance ↔ Why) ===== */
+  .materials{padding:128px 0;background:var(--bg);}
+  .materials .head{max-width:42em;margin:0 auto 64px;text-align:center;}
+  .mat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .mat-card{display:flex;flex-direction:column;}
+  .mat-thumb{aspect-ratio:1/1.414;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:12px;letter-spacing:.04em;border:1px dashed var(--line);margin-bottom:20px;font-weight:600;}
+  .mat-card h4{font-weight:800;font-size:17px;letter-spacing:-.005em;margin-bottom:10px;}
+  .mat-card p{font-size:13.5px;color:var(--sub);line-height:1.95;}
+  @media(max-width:860px){.mat-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto;}}
 
   /* ===== 6. Flow: 縦タイムライン(L/R交互+中央線) ===== */
   .flow{padding:128px 0 140px;background:var(--ink);color:var(--paper);position:relative;overflow:hidden;}
@@ -366,11 +373,11 @@
   .ex-row .ex-total b{font-weight:800;color:var(--orange);font-size:17px;}
   @media(max-width:760px){.price-card{padding:32px 24px;border-radius:20px;}.price-row{grid-template-columns:1fr;gap:10px;}.price-row .pval{text-align:left;}.price-examples{padding:28px 22px;}.ex-row{grid-template-columns:1fr 1fr;gap:8px 14px;padding:14px 18px;font-size:13px;}.ex-row.ex-head{display:none;}.ex-row span:nth-child(1){grid-column:1/-1;font-weight:800;color:var(--ink);}.ex-row .ex-total{text-align:left;}}
 
-  /* ===== 8. Team: nexus風 "Member Interview" スライダー(3枚見せ・中央フォーカス) ===== */
+  /* ===== 8. Team: nexus風 メンバー紹介スライダー(3枚見せ・中央フォーカス) ===== */
   .team{padding:128px 0;background:var(--bg);overflow:hidden;}
   .team .head-en{position:relative;margin-bottom:48px;padding-left:8px;}
   .team .head-en .eyeb{font-size:13px;color:var(--orange);font-weight:700;letter-spacing:.06em;margin-bottom:6px;}
-  .team .head-en h2{font-family:'Iowan Old Style','Georgia',serif;font-style:italic;font-weight:700;font-size:clamp(48px,7vw,96px);letter-spacing:-.02em;line-height:1;color:var(--ink);}
+  .team .head-en h2{font-weight:900;font-size:clamp(40px,5.6vw,72px);letter-spacing:-.02em;line-height:1.15;color:var(--ink);}
   .team .head-en h2 .o{color:var(--orange);}
   .team .head-en .hint{margin-top:14px;font-size:13.5px;color:var(--sub);}
   /* スライダー */
@@ -395,7 +402,7 @@
   .mcard .nominate:hover::after{transform:translateX(4px);}
   /* ナビゲーション */
   .mslider .ms-nav{display:flex;align-items:center;justify-content:space-between;margin-top:40px;gap:24px;}
-  .mslider .ms-counter{font-family:'Iowan Old Style','Georgia',serif;font-style:italic;font-size:20px;color:var(--ink);letter-spacing:.02em;}
+  .mslider .ms-counter{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:.04em;}
   .mslider .ms-counter .cur{color:var(--orange);font-size:32px;font-weight:700;line-height:1;}
   .mslider .ms-counter .sep{color:var(--line);margin:0 8px;}
   .mslider .ms-arrows{display:flex;gap:12px;}
@@ -480,7 +487,7 @@
   .why-card .pillar-jp .o{color:var(--orange);}
   .why-card .text-block h3{font-weight:800;font-size:22px;line-height:1.5;letter-spacing:-.005em;}
   .why-card .text-block p{font-size:14px;color:var(--sub);line-height:1.95;margin-top:14px;max-width:36em;}
-  .why-card .num-block{font-family:'Iowan Old Style','Georgia',serif;font-style:italic;font-size:80px;font-weight:300;color:var(--line);line-height:1;letter-spacing:-.03em;}
+  .why-card .num-block{font-size:80px;font-weight:900;color:var(--line);line-height:1;letter-spacing:-.03em;}
   /* 全幅帯を作るために section padding 0 + 各 card で max-width 内側 */
   @media(max-width:860px){
     .why-card{grid-template-columns:1fr;gap:18px;padding:48px 24px;}
@@ -549,11 +556,7 @@
   body.dark-section .scrollnav a.active .dot{background:#FF8A5E;box-shadow:0 0 0 4px rgba(255,138,94,.18);}
   @media(max-width:1100px){.scrollnav{display:none;}}
 
-  /* ===== VAIZO 説明引用ブロック (stance 内に挿入) ===== */
-  .vaizo-quote{border-left:3px solid var(--orange);background:var(--soft);padding:24px 28px;margin:28px 0 8px;border-radius:0 14px 14px 0;}
-  .vaizo-quote .ttl{font-weight:800;font-size:16px;letter-spacing:-.005em;margin-bottom:10px;}
-  .vaizo-quote p{font-size:13.5px;color:var(--sub);line-height:2;margin:0;}
-  .vaizo-quote p + p{margin-top:8px;}
+  /* vaizo-quote CSS削除済 (v8: stanceセクション撤去に伴い) */
 
   /* ===== Honesty: 縦書きの手紙(便箋)風 ===== */
   .honesty{padding:128px 0;background:linear-gradient(180deg,var(--bg) 0%,#F2EBDE 100%);position:relative;overflow:hidden;}
@@ -633,18 +636,14 @@
 </head>
 <body>
 
-<!-- 左固定 scrollspy サイドナビ -->
+<!-- 左固定 scrollspy サイドナビ(6項目) -->
 <nav class="scrollnav" aria-label="セクションナビ">
   <a href="#services" data-sec="services"><span class="dot"></span><span class="lbl">サービス</span></a>
-  <a href="#problems" data-sec="problems"><span class="dot"></span><span class="lbl">あきらめ</span></a>
-  <a href="#stance" data-sec="stance"><span class="dot"></span><span class="lbl">スタンス</span></a>
+  <a href="#problems" data-sec="problems"><span class="dot"></span><span class="lbl">課題</span></a>
   <a href="#why" data-sec="why"><span class="dot"></span><span class="lbl">強み</span></a>
-  <a href="#safety" data-sec="safety"><span class="dot"></span><span class="lbl">安心</span></a>
+  <a href="#safety" data-sec="safety"><span class="dot"></span><span class="lbl">安心の約束</span></a>
   <a href="#pricing" data-sec="pricing"><span class="dot"></span><span class="lbl">料金</span></a>
   <a href="#team" data-sec="team"><span class="dot"></span><span class="lbl">メンバー</span></a>
-  <a href="#honesty" data-sec="honesty"><span class="dot"></span><span class="lbl">正直に</span></a>
-  <a href="#faq" data-sec="faq"><span class="dot"></span><span class="lbl">FAQ</span></a>
-  <a href="#contact-detail" data-sec="contact-detail"><span class="dot"></span><span class="lbl">お問合せ</span></a>
 </nav>
 
 <!-- 0. ヘッダ -->
@@ -654,7 +653,6 @@
     <nav class="hd-nav">
       <a class="t" href="#services">サービス</a>
       <a class="t" href="#why">強み</a>
-      <a class="t" href="#stance">考え方</a>
       <a class="t" href="#pricing">料金</a>
       <a class="t" href="#team">メンバー</a>
       <!-- TODO: LINE公式URL が確定し次第 href を差し替え -->
@@ -675,7 +673,7 @@
         <span class="lead-l">コーポレートサイトの刷新、</span>
         <span class="punch"><span class="pain">あきらめて</span><br>いませんか？</span>
       </h1>
-      <p class="sub">見積もりが200万円で諦めた。社内で更新する仕組みが続かなかった。——そのまま止まっている採用サイト・コーポレートサイトを、TOPページ ¥250,000 から。公開後の運用は、AIが下書きを作り、人が最終確認して回します。担当ディレクターは、5名のメンバーからあなたが指名できます。</p>
+      <p class="sub">コーポレート・採用サイトを、TOPページ ¥250,000 から。公開後はお知らせ・問合せ返信・検索広告の改善案を AI が下書き、人が最終確認します。ディレクターは 5 名から指名できます。</p>
       <div class="cta">
         <a class="btn btn-fill" href="#pricing">料金を試算する <span class="arr">→</span></a>
         <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&amp;body=A4%201枚資料・費用対効果メモを希望します。">資料を受け取る</a>
@@ -707,7 +705,7 @@
       <div class="label">AI EMBEDDED</div>
       <div class="body">
         <h2><span class="kk">公開</span>して、<span class="ow">終わらせない</span>。<br><span class="kk">後悔</span>して、<span class="ow">終わらせない</span>。</h2>
-        <p>サイトの本当の勝負は、<span class="keyword">公開した日から</span>始まります。打ち上げて満足する制作会社は、半年後あなたを<span class="keyword">"後悔"</span>の側へ置いていきます。月3万円の保守の中で、AIが下書きを、人が最終確認を。運用は、止めません。</p>
+        <p>Webサイトは、<span class="keyword">公開してからが本番</span>です。「公開して納品終了」の制作会社に頼むと、半年後もお知らせは去年のまま、採用ページの応募は来ないまま、サイトは古いまま放置されます。月3万円の保守の中で、AIがお知らせ記事・問合せ返信・検索広告の改善案の下書きを作り、最終確認は人が行います。サイトの更新は、止まりません。</p>
         <div class="ai-list">
           <div><b>お知らせの下書き</b><span>更新ネタからAIがリライト案を作成。担当者は内容を確認して公開。</span></div>
           <div><b>問合せ返信の下書き</b><span>FAQと過去対応をAIが参照して返信案を用意。送信前に人が確認。</span></div>
@@ -723,29 +721,28 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Services</div>
-      <h2 class="h-md">3つの切り口から、<br>会社のWebを<span class="o">整え直し</span>ます。</h2>
+      <h2 class="h-md">コーポ・採用・AI運用の<br>3 本立てで、会社の Web を<span class="o">支えます</span>。</h2>
     </div>
     <div class="svc-row reveal-group">
       <div class="svc">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
         <div class="n">01 ／ Corporate</div>
         <h3>コーポレートサイト<br>制作</h3>
-        <p>会社の顔として、取引先・金融機関・採用候補が必ず見るサイト。情報設計から組み直し、信頼につながる形に整えます。公開後のお知らせ更新はAIが下書き、貴社で確認して公開できます。</p>
+        <p>取引先・金融機関・採用候補が会社を最初に調べるページです。情報の並べ順から作り直し、訪問者が必要な情報にすぐ辿りつける構造にします。</p>
         <div class="price"><b>25万円〜</b><span>INITIAL</span></div>
       </div>
       <div class="svc">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="n">02 ／ Recruit</div>
         <h3>採用サイト<br>制作</h3>
-        <p>求人媒体だけでは応募者の質が下がります。会社の空気・実際に働く人・働き方を、写真とテキストで一度に伝える独立した1サイトに。応募者からの問合せはAIが返信下書きを用意し、貴社で送信前に確認できます。</p>
+        <p>求人媒体だけでは応募者の質が下がります。日常の働き方・実際に働いている人・雰囲気を、写真とテキストで伝える独立した1サイトにします。応募者からの問合せはAIが返信下書きを用意します。</p>
         <div class="price"><b>25万円〜</b><span>INITIAL</span></div>
       </div>
       <div class="svc featured">
-        <span class="badge-feat">差別化の核</span>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></div>
         <div class="n">03 ／ AI Ops</div>
         <h3>AI運用、<br>月額に同梱。</h3>
-        <p>制作後の運用は、月3万円ぽっきり。お知らせ・問合せ返信・検索広告の改善案までAIが下書きし、最終確認は貴社で。社内の限られた工数でも、サイトを止めずに回せます。</p>
+        <p>制作後の運用は、月3万円ぽっきり。AI 同梱の運用までお引き受けします（詳細は上の AI 同梱バンドへ）。社内の限られた工数でも、サイトの更新は止まりません。</p>
         <div class="price"><b>月3万円</b><span>MONTHLY</span></div>
       </div>
     </div>
@@ -759,60 +756,77 @@
       <div class="h-eye">Common pain</div>
       <h2 class="h-md">こんな状態、<br><span class="o">あきらめていませんか。</span></h2>
     </div>
+    <p class="sub-note reveal">想定されるご相談例</p>
     <div class="prob-cloud">
       <div class="prob p1 reveal r-tilt">
-        <div class="avatar"><div class="av">A</div><div class="meta"><span class="role">製造業 / 経営者</span><span class="who">A社</span></div></div>
+        <div class="avatar"><div class="av">A</div><div class="meta"><span class="role">製造業 / 経営者</span><span class="who">A社</span></div><span class="case-label">典型例</span></div>
         <h4>お知らせ欄が、半年以上 止まっている。</h4>
-        <p>更新したい気持ちはあるけれど、Web担当が不在で誰も触れない。書く時間も無い。気づけば「最新情報」が去年の話…。</p>
+        <p>Web担当が不在で誰も触れない。書く時間も無い。気づけば「最新情報」が去年の話。</p>
       </div>
       <div class="prob p2 reveal r-tilt">
-        <div class="avatar"><div class="av">B</div><div class="meta"><span class="role">サービス業 / 役員</span><span class="who">B社</span></div></div>
+        <div class="avatar"><div class="av">B</div><div class="meta"><span class="role">サービス業 / 役員</span><span class="who">B社</span></div><span class="case-label">典型例</span></div>
         <h4>リニューアル見積もりが200万円で、諦めた。</h4>
-        <p>制作会社に話を聞いたら、トライアル30万＋本実装170万。中身は分からないまま、稟議も通せず、その日のうちに諦めた。</p>
+        <p>トライアル30万＋本実装170万。稟議も通せず、その日に諦めた。</p>
       </div>
       <div class="prob p3 reveal r-tilt">
-        <div class="avatar"><div class="av">C</div><div class="meta"><span class="role">飲食 / オーナー</span><span class="who">C店</span></div></div>
+        <div class="avatar"><div class="av">C</div><div class="meta"><span class="role">飲食 / オーナー</span><span class="who">C店</span></div><span class="case-label">典型例</span></div>
         <h4>スマホで見ると、レイアウトが崩れている。</h4>
-        <p>10年前に作ったまま、スマホ対応していない。来店前に検索したお客さんが、レイアウトの崩れたサイトを見て離れていっている気がする。</p>
+        <p>10年前のサイトをそのまま。来店前に検索したお客さんが、たぶん離れている。</p>
       </div>
       <div class="prob p4 reveal r-tilt">
-        <div class="avatar"><div class="av">D</div><div class="meta"><span class="role">建設業 / 総務</span><span class="who">D社</span></div></div>
+        <div class="avatar"><div class="av">D</div><div class="meta"><span class="role">建設業 / 総務</span><span class="who">D社</span></div><span class="case-label">典型例</span></div>
         <h4>採用ページが古いまま、応募ゼロが続く。</h4>
-        <p>求人ポータルには出しているが、サイトを見て応募者が静かに離脱している。会社の空気・人・働き方が、サイトでは何ひとつ伝わらない。</p>
+        <p>求人ポータルには出している。でもサイトに来た人が、写真も社員紹介も無くて静かに離脱している。</p>
       </div>
       <div class="prob p5 reveal r-tilt">
-        <div class="avatar"><div class="av">E</div><div class="meta"><span class="role">士業 / 代表</span><span class="who">E事務所</span></div></div>
-        <h4>CMSが動かなくなって、お問合せフォームも止まった。</h4>
-        <p>当時の制作会社と連絡が取れない。WordPressのバージョンも上げられていない。せめて問合せが復旧する形にしたい。</p>
+        <div class="avatar"><div class="av">E</div><div class="meta"><span class="role">士業 / 代表</span><span class="who">E事務所</span></div><span class="case-label">典型例</span></div>
+        <h4>CMSが動かなくなって、問合せフォームも止まった。</h4>
+        <p>当時の制作会社と連絡が取れない。WordPressも古いまま。せめて問合せだけでも復旧したい。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. VAIZOの考え方 -->
+<!-- 5. Stance (v9再追加: h2のみ) -->
 <section class="stance" id="stance">
   <div class="inner">
     <div class="reveal">
       <div class="eyeb">Our stance</div>
       <h2 class="punch">
-        Web制作の値段は、<br>
-        ほとんどが <span class="ul">人件費</span>です。<br>
-        私たちは、その分を、<br>
-        <span class="ser">AIに、任せます。</span>
+        Web制作の値段は、ほとんどが <span class="ul">人件費</span>です。<br>
+        私たちは、人がやらなくていい作業を <span class="ser">AI</span> に任せます。<br>
+        人にしかできない判断と、決裁者向けの説明だけは、<br>
+        必ず人が担当します。
       </h2>
     </div>
-    <div class="annot reveal-group">
-      <div class="a">
-        <div class="num">¥<span class="y">250,000</span><span class="u">〜</span></div>
-        <p><b>初期費用</b>は、人件費を畳んだ結果。決裁が通る金額から始まります。</p>
+  </div>
+</section>
+
+<!-- 8. Materials (決裁者向け資料) -->
+<section class="materials" id="materials">
+  <div class="inner">
+    <div class="head reveal">
+      <div class="h-eye">Materials</div>
+      <h2 class="h-md">決裁を通すための資料、<br><span class="o">こちらで用意します</span>。</h2>
+    </div>
+    <div class="mat-grid reveal-group">
+      <div class="mat-card">
+        <!-- TODO: A4資料サムネを差し込み -->
+        <div class="mat-thumb">資料サンプル準備中</div>
+        <h4>A4 1 枚 概要資料</h4>
+        <p>事業内容・料金・体制・スケジュールを 1 枚に。役員説明や稟議添付にそのまま使える形式。</p>
       </div>
-      <div class="a">
-        <div class="num">¥<span class="y">30,000</span><span class="u">／月</span></div>
-        <p><b>運用</b>は、AIの下書き + 人の最終確認で回す。Web担当の新規採用は不要です。</p>
+      <div class="mat-card">
+        <!-- TODO: A4資料サムネを差し込み -->
+        <div class="mat-thumb">資料サンプル準備中</div>
+        <h4>費用対効果メモ</h4>
+        <p>Web 担当者を採用した場合の年間人件費との比較、6 ヶ月での投資回収シナリオを試算。</p>
       </div>
-      <div class="a">
-        <div class="num"><span class="y">そのまま</span></div>
-        <p><b>品質</b>は、落としません。情報設計と決裁者向けの説明だけは、人が手を抜かない。</p>
+      <div class="mat-card">
+        <!-- TODO: A4資料サムネを差し込み -->
+        <div class="mat-thumb">資料サンプル準備中</div>
+        <h4>3 者オンライン面談</h4>
+        <p>決裁者・現場担当・私たちの三者で、認識を一度で揃える場をご提供。</p>
       </div>
     </div>
   </div>
@@ -823,8 +837,8 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Why V/ENTER WEB</div>
-      <h2 class="h-md">安い・早い・きれい。<br>普通は1つを諦めますが、<br>私たちは <span class="o">"AIで畳めるぶん"</span> を、その1つに回します。</h2>
-      <p class="lead" style="margin-top:22px;">Web制作は普通、安い・早い・きれいのうち1つを諦めます。私たちはAIで人の工数を削れる分を、デザインの密度と納期の短縮にそのまま回す設計にしました。だから、3つを同時に成立させようとしています。</p>
+      <h2 class="h-md">安い・早い・きれい。<br>普通は1つを諦めますが、<br>AIに任せられる作業を増やして、<span class="o">3つすべて</span>を実現します。</h2>
+      <p class="lead" style="margin-top:22px;">Web制作は普通、安い・早い・きれいのうち1つを諦めます。私たちは、AIに任せられる作業を増やして人の工数を減らし、その分をそのままデザインの密度と納期の短縮に使います。3つどれも妥協しません。</p>
     </div>
   </div>
   <div class="why-strip">
@@ -834,8 +848,8 @@
         <div class="pillar-jp"><span class="o">安</span>い</div>
       </div>
       <div class="text-block">
-        <h3>TOP一式 ¥250,000 から始められる。</h3>
-        <p>人件費の積み上げではなくAIで工程を畳むから、決裁が通る金額に収まります。TOP 25万円・下層5万円/頁。見積もりは初回相談の場で即お出しします。</p>
+        <h3>TOP一式 ¥250,000 から。</h3>
+        <p>人件費の積み上げではなく、AIで工程数そのものを減らすので、決裁が通る金額に収まります。TOP 25万円・下層5万円/頁。見積もりは初回相談で即出します。</p>
       </div>
       <div class="num-block">01</div>
     </div>
@@ -846,7 +860,7 @@
       </div>
       <div class="text-block">
         <h3>構成決定後、すぐに動き始める。</h3>
-        <p>情報設計のテンプレ化と、AIによる初稿生成で待ち時間を作りません。構成決定後の制作は、社内確認の往復を含めて2〜4週間が目安です。</p>
+        <p>情報設計のテンプレ化と、AIによる初稿生成で、着手までの空白期間を作りません。構成決定後の制作は2〜4週間が目安です。</p>
       </div>
       <div class="num-block">02</div>
     </div>
@@ -856,8 +870,8 @@
         <div class="pillar-jp"><span class="o">き</span>れい</div>
       </div>
       <div class="text-block">
-        <h3>デザイナーを、自分で指名できる。</h3>
-        <p>大手制作会社水準のデザインを、5名のディレクター/デザイナーからあなたが選べます。着手前にデザイン案を複数お出しし、選んでから本制作に進みます。追加費用はかかりません。</p>
+        <h3>デザイナーは、自分で指名できる。</h3>
+        <p>5名のディレクター/デザイナーから選択。着手前にデザイン案を複数提示、選んでから本制作へ。追加費用なし。</p>
       </div>
       <div class="num-block">03</div>
     </div>
@@ -873,7 +887,7 @@
     <div class="head-block reveal">
       <div class="h-eye">Safety</div>
       <h2 class="h-md">安心して、<span class="o">相見積もり</span>をどうぞ。</h2>
-      <p class="lead" style="margin-top:18px;">商談で必ず聞かれる4つの不安を、先に潰しておきます。スクロールでチェック！</p>
+      <p class="lead" style="margin-top:18px;">商談で必ず聞かれる4つの不安を、先にお答えしておきます。下に4つ並べています。</p>
     </div>
     <div class="safety-board reveal-group">
       <div class="item reveal">
@@ -883,7 +897,7 @@
         </div>
         <div>
           <h4>相見積もり歓迎です。</h4>
-          <p>他社と比べて選んでください。比較資料が必要なら、A4 1枚にまとめてお渡しします。判断材料を増やすのが私たちの仕事です。</p>
+          <p>他社と比べて選んでください。比較用A4 1枚を必要なら出します。</p>
         </div>
       </div>
       <div class="item reveal">
@@ -893,7 +907,7 @@
         </div>
         <div>
           <h4>最低契約6ヶ月の理由は、AI運用にあります。</h4>
-          <p>AI運用は初月で結果が出ません。3ヶ月で学習データが溜まり、6ヶ月で改善サイクルが回り始めます。期間後はいつでも解約可能、違約金はありません。</p>
+          <p>3ヶ月で学習データが溜まり、6ヶ月で改善サイクルが回ります。期間後はいつでも解約可、違約金なし。</p>
         </div>
       </div>
       <div class="item reveal">
@@ -903,7 +917,7 @@
         </div>
         <div>
           <h4>公開前なら、キャンセル可能です。</h4>
-          <p>構成・デザイン段階で「やはり見送り」となった場合、作業実費のみのご請求で終了できます。一度始めたら戻れない、ということはありません。</p>
+          <p>構成・デザイン段階で「やはり見送り」となった場合、作業実費のみのご請求で終了できます。違約金はありません。</p>
         </div>
       </div>
       <div class="item reveal">
@@ -913,7 +927,7 @@
         </div>
         <div>
           <h4>担当が合わなければ、変更できます。</h4>
-          <p>ディレクターは契約後でも交代できます。指名し直しの追加費用はかかりません。「人」で選ぶ事業だから、合わなかった時の出口も用意しています。</p>
+          <p>ディレクターは契約後でも交代できます。指名し直しの追加費用はかかりません。「人」で選ぶ事業だからこそ、合わなかった時の切り替え手段も用意しています。</p>
         </div>
       </div>
     </div>
@@ -925,13 +939,13 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Pricing</div>
-      <h2 class="h-md">料金は、<span class="o">かんたん明朗</span>。</h2>
+      <h2 class="h-md">料金は、<span class="o">3つだけ</span>です。</h2>
       <p class="lead" style="margin-top:22px;">TOPページ＋必要な分だけの下層ページ＋月額保守。すべて税抜表示です。</p>
     </div>
     <div class="price-card reveal">
       <div class="price-row">
         <div class="pname">TOPページ制作</div>
-        <div class="pdesc">情報設計・デザイン・スマホ最適化・基本SEO・基本機能まで一式。ここがスタート地点。</div>
+        <div class="pdesc">情報設計・デザイン・スマホ最適化・基本SEO・基本機能まで一式。制作はここから始まります。</div>
         <div class="pval">¥250,000<span class="u">固定</span></div>
       </div>
       <div class="price-row">
@@ -941,7 +955,7 @@
       </div>
       <div class="price-row">
         <div class="pname">保守・AI運用</div>
-        <div class="pdesc">サーバ／更新管理＋AIによるお知らせ生成・問合せ一次対応・検索広告最適化を同梱。月額固定。</div>
+        <div class="pdesc">サーバ／更新管理＋AI 同梱の運用（詳細は AI 同梱バンドへ）。月額固定。</div>
         <div class="pval">¥30,000<span class="u">／月</span></div>
       </div>
       <div class="price-row">
@@ -1022,7 +1036,7 @@
           <span class="pbi-monthly">¥30,000</span>
         </div>
         <div class="pbi-row">
-          <span class="pbi-industry">飲食・小売 1店舗</span>
+          <span class="pbi-industry">飲食・小売（単一店舗）</span>
           <span>TOP + 下層 2頁</span>
           <span class="pbi-init">¥350,000</span>
           <span class="pbi-monthly">¥30,000</span>
@@ -1055,9 +1069,9 @@
 <section class="team" id="team">
   <div class="inner">
     <div class="head-en reveal r-left">
-      <div class="eyeb">Members ／ 結局は、人で選びたい。</div>
-      <h2>Member <span class="o">Interview</span></h2>
-      <p class="hint">この事業に関わる5名です。相性の良さそうなディレクターを、あなたから指名できます。</p>
+      <div class="eyeb">Members ／ 結局は、人で選びますよね。</div>
+      <h2>メンバー<span class="o">紹介</span></h2>
+      <p class="hint">この事業に関わる5名です。業種や課題が近いディレクターを、あなたから指名できます。</p>
     </div>
 
     <div class="mslider" id="memberSlider">
@@ -1131,12 +1145,12 @@
     <div class="head-row reveal">
       <span class="label">Honesty / 一筆、申し上げます</span>
       <h2>正直に、<span class="accent">申</span>し上げます。</h2>
-      <div class="stamp">実績<br><b>0件</b><br>未満</div>
+      <div class="stamp">実績<br><b>0件</b></div>
     </div>
     <div class="scroll-wrap reveal r-fade">
       <div class="letter">
         <div class="opener">
-          V/ENTER WEB は、二〇二六年に<span class="ka">始まったばかり</span>の新しい事業です。<br>公開できる制作実績は、まだ十分にありません。<br>代わりに、いま私たちが差し出せるものを三つ、はっきりお伝えします。
+          V/ENTER WEB は、二〇二六年<span class="ka">五月に立ち上げた</span>新しい事業です。<br>公開できる制作実績は、まだ十分にありません。<br>代わりに、いま私たちが差し出せるものを三つ、はっきりお伝えします。
         </div>
         <div class="body">
           <div class="para">
@@ -1147,7 +1161,7 @@
           <div class="para">
             <span class="num">二.</span>
             <span class="pttl">初期パートナー価格は、長く据え置きます。</span><br>
-            <span class="pdet">月三万円ぽっきりは、契約が続く限り変更しません。実績を一緒に作っていただく時期だからこその価格です。</span>
+            <span class="pdet">月三万円ぽっきりは、契約が続く限り変更しません。最初のお客様としてお受けする時期だからこその価格です。</span>
           </div>
           <div class="para">
             <span class="num">三.</span>
@@ -1155,7 +1169,7 @@
             <span class="pdet">公開前のキャンセル、契約後の担当変更、六ヶ月後の解約。すべて違約金なしで対応します。</span>
           </div>
         </div>
-        <div class="close">実績が無い時期こそ、<span class="o">一番真剣にやります</span>。</div>
+        <div class="close">実績が無い時期だからこそ、他社より時間をかけて、<span class="o">最初のお客様として取り組みます</span>。</div>
         <div class="sign">
           <span class="date">二〇二六年 五月</span>
           <span class="name">橋本 友太郎</span>
@@ -1174,16 +1188,16 @@
       <h2 class="h-md">よくあるご質問</h2>
     </div>
     <div class="faq-wrap reveal">
-      <div class="qa"><q><span class="q-text">本当に25万円から、コーポレートサイトが作れますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。¥250,000はTOPページ1枚の固定価格です。下層ページ(会社概要・サービス・採用等)が必要な場合は1頁あたり¥50,000で追加できます。たとえば「TOP + 下層3頁」なら¥400,000、「TOP + 下層6頁」なら¥550,000です。価格を抑えられる理由は、人がやらなくていい工程をAIで巻き取っているからです。何にいくらかかるかは、最初にすべて明示します。</p></div></div>
-      <div class="qa"><q><span class="q-text">保守の月3万円には、何が含まれますか？</span><span class="tgl"></span></q><div class="ans"><p>サーバ・更新管理に加え、AIによるお知らせ記事の下書き、問合せ返信の下書き、検索広告の改善案作成を含みます。AIが下書きを作り、人が安全装置として最終確認する運用です。月¥30,000ぽっきりで、TOP + 下層6頁程度までの構成を前提にしています。それを超える大規模構成・多言語・会員機能・IR統合等は別途お見積りとなります。</p></div></div>
-      <div class="qa"><q><span class="q-text">大手の制作会社に依頼するのと、何が違いますか？</span><span class="tgl"></span></q><div class="ans"><p>大手制作会社は分業が前提なため、ディレクション・デザイン・コーディング・運用が別々の担当に分かれ、その人件費の積み重ねが見積もりに反映されます。私たちは、人でなくていい工程をAIに任せ、人の工数を必要な部分に絞ります。結果として価格は下がりますが、情報設計や決裁者向けの説明は妥協していません。</p></div></div>
-      <div class="qa"><q><span class="q-text">採用サイトと、コーポレートサイトを同時に依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。2通りのご提案が可能です。①1つのサイトに統合する場合: TOP + 下層7頁程度の構成で<b>¥600,000</b>が目安(料金セクションの業種別早見表をご参照ください)。情報設計の整合性が取れ、運用も一本化できます。②2サイトを別々に立てる場合: コーポ・採用それぞれで初期費用が発生します。どちらが適切かは、ヒアリングで一緒に判断します。</p></div></div>
-      <div class="qa"><q><span class="q-text">既存サイトのリニューアルも対応していますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。「過去の制作会社に依頼したまま更新が止まっている」「自社のCMSが古くなって触れない」といった状態のリニューアルに対応します。現状を拝見した上で、必要なページだけ作り直すのか、全面リニューアルが適切なのかを含めて、構成と金額をご提案します。料金体系は新規制作と同じ(TOP ¥250,000 + 下層 ¥50,000/頁)です。</p></div></div>
+      <div class="qa"><q><span class="q-text">本当に25万円から、コーポレートサイトが作れますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。¥250,000はTOPページ1枚の固定価格です。下層ページは1頁¥50,000で追加。例: TOP+下層3頁=¥400,000、TOP+下層6頁=¥550,000。価格を抑えられるのは、AI で工程数そのものを減らしているからです。</p></div></div>
+      <div class="qa"><q><span class="q-text">保守の月3万円には、何が含まれますか？</span><span class="tgl"></span></q><div class="ans"><p>サーバ・更新管理＋AIによるお知らせ下書き・問合せ返信下書き・検索広告改善案。最終確認は人が安全装置として行います。月¥30,000、TOP+下層6頁までの構成が前提。それ以上は別途お見積り。</p></div></div>
+      <div class="qa"><q><span class="q-text">大手の制作会社に依頼するのと、何が違いますか？</span><span class="tgl"></span></q><div class="ans"><p>大手は分業前提で、ディレクション/デザイン/コーディング/運用が別担当。その人件費の積み上げが見積もりに乗ります。私たちは、人がやらなくていい作業はAIに置き換え、人が必ず関わる作業の分だけ料金を頂きます。</p></div></div>
+      <div class="qa"><q><span class="q-text">採用サイトと、コーポレートサイトを同時に依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。①1サイトに統合: TOP+下層7頁で <b>¥600,000</b> が目安。運用も一本化できます。②2サイト別立て: コーポ・採用それぞれで初期費用が発生。どちらが適切かはヒアリングで判断します。</p></div></div>
+      <div class="qa"><q><span class="q-text">既存サイトのリニューアルも対応していますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。「制作会社に依頼したまま止まっている」「CMSが古くて触れない」状態のリニューアルに対応。必要なページだけ作り直しか全面か、構成と金額をご提案します。料金は新規と同じ(TOP ¥250,000 + 下層 ¥50,000/頁)。</p></div></div>
       <div class="qa"><q><span class="q-text">遠方の会社でも、依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。やりとりはオンラインで完結しますので、地域を問わずご依頼いただけます。まずはメールでお気軽にお問い合わせください。</p></div></div>
       <div class="qa"><q><span class="q-text">制作実績はどれくらいありますか？</span><span class="tgl"></span></q><div class="ans"><p>公開できる制作実績は、まだ十分にありません。代わりに、このLP・自社サイト・お渡しする提案資料そのものが、私たちの制作水準を示すものとお考えください。「正直に申し上げます」の項にも記載しています。</p></div></div>
       <div class="qa"><q><span class="q-text">公開後、サイトに不具合が出たらどうなりますか？</span><span class="tgl"></span></q><div class="ans"><p>月3万円の保守の中で、表示崩れ・サーバ障害・主要機能の不具合は無償で修正対応します。修正範囲はご契約時に明文化したものをお渡しします。「直したら追加見積もり」のような後出しは行いません。</p></div></div>
       <div class="qa"><q><span class="q-text">株式会社VAIZOは、どんな会社ですか？</span><span class="tgl"></span></q><div class="ans"><p>2026年設立、AIの実装と運用を本業とする会社です。V/ENTER WEB はその中で「中小企業のWeb領域に、AIで作った余白を直接届ける」事業として立ち上げました。事業全体の方針は <a href="https://vaizo.jp" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:underline;">vaizo.jp</a> に記載しています。</p></div></div>
-      <div class="qa"><q><span class="q-text">稟議が通るか不安です。何かサポートはありますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。A4 1枚の概要資料(事業内容・料金・体制・スケジュール)、役員・経理向けの費用対効果メモ(Web担当者を採用した場合の年間人件費との比較)、必要に応じて決裁者・現場担当・私たちの3者オンライン面談をご用意します。決裁を通すまでが、私たちの仕事だと考えています(「考え方」セクションの05にも記載)。</p></div></div>
+      <div class="qa"><q><span class="q-text">稟議が通るか不安です。何かサポートはありますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。A4 1枚の概要資料、役員・経理向けの費用対効果メモ、決裁者・現場担当との3者オンライン面談をご用意します。決裁を通すまでが、私たちの仕事です。</p></div></div>
     </div>
   </div>
 </section>
@@ -1197,7 +1211,7 @@
   <div class="inner">
     <div class="wrap">
       <h2>まずは、<span class="pain">見積もり</span>だけでも。</h2>
-      <p>「うちの場合はいくらになるか」だけでも、お答えします。初回ヒアリングは30分、無料です。売り込みはしません。話を聞いて、当社が合わないと感じたら、その場で「今回は見送り」と言っていただいて構いません。</p>
+      <p>「うちの場合いくら？」だけでも答えます。初回ヒアリング30分、無料。売り込みはしません。</p>
       <div class="cta">
         <a class="btn btn-fill" href="#pricing">料金を試算する <span class="arr">→</span></a>
         <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&amp;body=A4%201枚資料・費用対効果メモを希望します。">資料を受け取る</a>
@@ -1254,7 +1268,6 @@
         <a href="#services">サービス</a>
         <a href="#materials">決裁者向け資料</a>
         <a href="#why">強み</a>
-        <a href="#stance">考え方</a>
         <a href="#safety">安心の約束</a>
         <a href="#pricing">料金</a>
         <a href="#team">メンバー</a>
@@ -1309,7 +1322,31 @@
   window.addEventListener('resize', updateScrollnav);
   updateScrollnav();
 
-  // Member Interview slider (nexus風: 中央フォーカス・両側グレースケール)
+  // Problems: モバイルでスクロールしてカードが画面中央に来たら拡大(.is-focused)
+  (() => {
+    const probs = document.querySelectorAll('.prob');
+    if (!probs.length) return;
+    const mq = window.matchMedia('(max-width: 860px)');
+    let io = null;
+    const enable = () => {
+      if (io) return;
+      io = new IntersectionObserver((entries) => {
+        entries.forEach(e => e.target.classList.toggle('is-focused', e.isIntersecting));
+      }, { rootMargin: '-38% 0px -38% 0px', threshold: 0 });
+      probs.forEach(p => io.observe(p));
+    };
+    const disable = () => {
+      if (!io) return;
+      probs.forEach(p => { io.unobserve(p); p.classList.remove('is-focused'); });
+      io.disconnect();
+      io = null;
+    };
+    const apply = () => mq.matches ? enable() : disable();
+    apply();
+    mq.addEventListener('change', apply);
+  })();
+
+  // メンバー紹介 slider (nexus風: 中央フォーカス・両側グレースケール)
   (() => {
     const slider = document.getElementById('memberSlider');
     if (!slider) return;
