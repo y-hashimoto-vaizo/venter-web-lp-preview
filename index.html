@@ -256,7 +256,7 @@
   /* ===== 4. Problems: 経営者の生の声(フキダシ・傾き) ===== */
   .problems{padding:128px 0 112px;background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;}
   .problems .head{max-width:38em;margin:0 auto 72px;text-align:center;}
-  .prob-cloud{position:relative;max-width:1080px;margin:0 auto;min-height:560px;}
+  .prob-cloud{position:relative;margin:0 auto;min-height:560px;}
   .prob{background:var(--paper);border-radius:22px;padding:28px 30px 24px;border:1px solid var(--line);box-shadow:0 18px 42px rgba(0,0,0,.08);position:absolute;width:340px;display:flex;flex-direction:column;gap:12px;transition:transform .35s cubic-bezier(.34,1.56,.64,1);}
   .prob::after{content:"";position:absolute;width:24px;height:24px;background:var(--paper);border-right:1px solid var(--line);border-bottom:1px solid var(--line);bottom:-12px;}
   .prob:hover{transform:rotate(0deg) scale(1.03)!important;z-index:10;}
@@ -300,7 +300,7 @@
   .stance .ticker .track .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
   @keyframes tickerMove{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
   /* メインエディトリアル */
-  .stance .spread{position:relative;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start;}
+  .stance .spread{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start;}
   .stance .spread .label{display:inline-block;font-size:11px;color:var(--orange);font-weight:800;letter-spacing:.22em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--orange);border-radius:99px;margin-bottom:28px;}
   .stance .big-quote{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-weight:700;font-size:clamp(34px,5.4vw,68px);line-height:1.45;letter-spacing:.01em;color:var(--ink);position:relative;}
   .stance .big-quote::before{content:"「";position:absolute;left:-44px;top:-20px;font-size:1em;color:var(--orange);opacity:.4;font-weight:400;}
@@ -313,28 +313,28 @@
   .stance .side{position:relative;padding-top:36px;}
   .stance .stamp-mark{position:absolute;top:-30px;right:0;width:120px;height:120px;border:3px solid var(--orange);border-radius:50%;color:var(--orange);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:11px;letter-spacing:.12em;line-height:1.4;text-align:center;transform:rotate(-12deg);text-transform:uppercase;background:rgba(255,255,255,.6);backdrop-filter:blur(2px);}
   .stance .stamp-mark b{font-size:22px;display:block;margin:4px 0;letter-spacing:-.02em;}
-  .stance .vaizo-note{margin-top:80px;padding:28px 30px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06);position:relative;}
-  .stance .vaizo-note::before{content:"VAIZO";position:absolute;top:-10px;left:20px;background:var(--orange);color:var(--paper);font-size:9px;letter-spacing:.18em;font-weight:800;padding:4px 10px;border-radius:99px;}
+  .stance .vaizo-note{margin-top:60px;padding-top:20px;border-top:1px solid var(--orange);position:relative;}
+  .stance .vaizo-note::before{content:"VAIZO ／ 会社のこと";position:absolute;top:-9px;left:0;background:var(--bg);color:var(--orange);font-size:10px;letter-spacing:.18em;font-weight:800;padding:0 10px 0 0;}
   .stance .vaizo-note p{font-size:13.5px;color:var(--sub);line-height:1.95;}
   .stance .vaizo-note p + p{margin-top:10px;}
   .stance .vaizo-note .keyw{color:var(--ink);font-weight:800;}
-  /* 4原則: 散らしたメモ風 */
-  .stance .principles{margin-top:96px;position:relative;max-width:1100px;margin-left:auto;margin-right:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  .stance .pnote{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px;position:relative;transition:transform .3s;box-shadow:0 8px 22px rgba(0,0,0,.06);}
-  .stance .pnote:hover{transform:translateY(-6px) rotate(0deg)!important;}
-  .stance .pnote:nth-child(1){transform:rotate(-2deg);}
-  .stance .pnote:nth-child(2){transform:rotate(1.5deg) translateY(14px);}
-  .stance .pnote:nth-child(3){transform:rotate(-1deg) translateY(-8px);}
-  .stance .pnote:nth-child(4){transform:rotate(2deg);}
-  .stance .pnote .pin{position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:var(--orange);box-shadow:0 2px 6px rgba(232,93,47,.4);}
-  .stance .pnote .pn{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-style:italic;color:var(--orange);font-size:14px;font-weight:700;margin-bottom:10px;}
-  .stance .pnote h4{font-weight:800;font-size:15px;line-height:1.55;letter-spacing:-.005em;}
+  /* 4原則: 横ライン区切りの宣言列(カード廃止) */
+  .stance .principles{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stance .pnote{padding:32px 28px;border-left:1px solid var(--line);position:relative;transition:background .3s;}
+  .stance .pnote:first-child{border-left:none;}
+  .stance .pnote:hover{background:rgba(232,93,47,.04);}
+  .stance .pnote .pn{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-style:italic;color:var(--orange);font-size:36px;font-weight:700;line-height:1;margin-bottom:18px;letter-spacing:-.02em;}
+  .stance .pnote h4{font-weight:800;font-size:16px;line-height:1.55;letter-spacing:-.005em;color:var(--ink);}
+  /* 4原則の上下に横線 */
+  .stance .principles-wrap{margin-top:96px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);}
+  .stance .principles-wrap .principles{margin-top:0;}
   @media(max-width:860px){
     .stance .spread{grid-template-columns:1fr;gap:36px;}
     .stance .big-quote::before{position:static;display:inline;}
     .stance .stamp-mark{top:auto;right:auto;left:0;margin-top:20px;position:relative;}
     .stance .principles{grid-template-columns:1fr 1fr;}
-    .stance .pnote:nth-child(n){transform:rotate(-1deg)!important;}
+    .stance .pnote{border-left:none;border-top:1px solid var(--line);}
+    .stance .pnote:nth-child(-n+2){border-top:none;}
   }
 
   /* ===== 6. Flow: 縦タイムライン(L/R交互+中央線) ===== */
@@ -393,29 +393,52 @@
   .ex-row .ex-total b{font-weight:800;color:var(--orange);font-size:17px;}
   @media(max-width:760px){.price-card{padding:32px 24px;border-radius:20px;}.price-row{grid-template-columns:1fr;gap:10px;}.price-row .pval{text-align:left;}.price-examples{padding:28px 22px;}.ex-row{grid-template-columns:1fr 1fr;gap:8px 14px;padding:14px 18px;font-size:13px;}.ex-row.ex-head{display:none;}.ex-row span:nth-child(1){grid-column:1/-1;font-weight:800;color:var(--ink);}.ex-row .ex-total{text-align:left;}}
 
-  /* ===== 8. Team: ポラロイド傾きギャラリー ===== */
-  .team{padding:128px 0;background:var(--bg);}
-  .team .head{max-width:42em;margin:0 auto 48px;text-align:center;}
-  .team .hint{font-size:13.5px;color:var(--sub);margin-top:12px;}
-  .polaroid-stage{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:24px;padding:32px 16px 48px;max-width:1180px;margin:0 auto;}
-  .mcard{flex:0 0 230px;background:var(--paper);padding:14px 14px 22px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.10);transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s;position:relative;}
-  .mcard:hover{transform:rotate(0deg) scale(1.05)!important;z-index:5;box-shadow:0 26px 50px rgba(0,0,0,.18);}
-  .mcard:nth-child(1){transform:rotate(-3deg);}
-  .mcard:nth-child(2){transform:rotate(2deg) translateY(-12px);}
-  .mcard:nth-child(3){transform:rotate(-1.5deg);}
-  .mcard:nth-child(4){transform:rotate(2.5deg) translateY(-8px);}
-  .mcard:nth-child(5){transform:rotate(-2deg);}
-  .mcard .ph{aspect-ratio:1/1;overflow:hidden;background:var(--orange-soft);}
-  .mcard .ph img{width:100%;height:100%;object-fit:cover;}
-  .mcard .bd{padding:14px 6px 4px;display:flex;flex-direction:column;}
-  .mcard .role{font-size:10px;color:var(--orange);letter-spacing:.06em;font-weight:700;}
-  .mcard .nm{font-weight:800;font-size:16px;margin-top:6px;letter-spacing:-.005em;}
-  .mcard .en{display:block;font-size:9px;color:var(--sub);letter-spacing:.08em;margin-top:2px;font-weight:600;}
-  .mcard .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;}
-  .mcard .tags span{font-size:10px;font-weight:700;color:var(--orange);background:var(--orange-soft);padding:3px 8px;border-radius:99px;}
-  .mcard .nominate{margin-top:14px;padding:9px 0;text-align:center;font-size:11.5px;font-weight:700;background:var(--ink);color:var(--paper);border-radius:999px;transition:.2s;}
-  .mcard .nominate:hover{background:var(--orange);}
-  @media(max-width:760px){.polaroid-stage{gap:18px;}.mcard{flex:0 0 calc(50% - 9px);}.mcard:nth-child(n){transform:rotate(-1deg);}}
+  /* ===== 8. Team: nexus風 "Member Interview" スライダー(3枚見せ・中央フォーカス) ===== */
+  .team{padding:128px 0;background:var(--bg);overflow:hidden;}
+  .team .head-en{position:relative;margin-bottom:48px;padding-left:8px;}
+  .team .head-en .eyeb{font-size:13px;color:var(--orange);font-weight:700;letter-spacing:.06em;margin-bottom:6px;}
+  .team .head-en h2{font-family:'Iowan Old Style','Georgia',serif;font-style:italic;font-weight:700;font-size:clamp(48px,7vw,96px);letter-spacing:-.02em;line-height:1;color:var(--ink);}
+  .team .head-en h2 .o{color:var(--orange);}
+  .team .head-en .hint{margin-top:14px;font-size:13.5px;color:var(--sub);}
+  /* スライダー */
+  .mslider{position:relative;}
+  .mslider .track-wrap{overflow:hidden;}
+  .mslider .track{display:flex;gap:32px;transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform;}
+  .mcard{flex:0 0 calc((100% - 64px) / 3);transition:filter .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1);filter:grayscale(.95) brightness(.92);cursor:pointer;}
+  .mcard.is-center{filter:grayscale(0) brightness(1);}
+  .mcard .ph{aspect-ratio:4/5;overflow:hidden;background:var(--orange-soft);position:relative;}
+  .mcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.4,0,.2,1);}
+  .mcard.is-center:hover .ph img{transform:scale(1.04);}
+  .mcard .content{padding:22px 4px 0;opacity:.3;transition:opacity .6s cubic-bezier(.4,0,.2,1) .15s;}
+  .mcard.is-center .content{opacity:1;}
+  .mcard .role{font-size:11px;color:var(--orange);font-weight:700;letter-spacing:.08em;}
+  .mcard .nm{font-weight:800;font-size:22px;margin-top:8px;letter-spacing:-.01em;color:var(--ink);}
+  .mcard .nm .en{display:block;font-size:10px;color:var(--sub);letter-spacing:.1em;margin-top:4px;font-weight:600;}
+  .mcard .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+  .mcard .tags span{font-size:11px;font-weight:700;color:var(--orange);background:rgba(232,93,47,.08);padding:5px 12px;border-radius:99px;}
+  .mcard .nominate{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:12.5px;font-weight:700;color:var(--ink);border-bottom:1.5px solid var(--ink);padding-bottom:3px;transition:color .2s,border-color .2s;}
+  .mcard .nominate:hover{color:var(--orange);border-color:var(--orange);}
+  .mcard .nominate::after{content:"→";transition:transform .2s;}
+  .mcard .nominate:hover::after{transform:translateX(4px);}
+  /* ナビゲーション */
+  .mslider .ms-nav{display:flex;align-items:center;justify-content:space-between;margin-top:40px;gap:24px;}
+  .mslider .ms-counter{font-family:'Iowan Old Style','Georgia',serif;font-style:italic;font-size:20px;color:var(--ink);letter-spacing:.02em;}
+  .mslider .ms-counter .cur{color:var(--orange);font-size:32px;font-weight:700;line-height:1;}
+  .mslider .ms-counter .sep{color:var(--line);margin:0 8px;}
+  .mslider .ms-arrows{display:flex;gap:12px;}
+  .mslider .ms-arrow{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;color:var(--ink);}
+  .mslider .ms-arrow:hover{background:var(--ink);color:var(--paper);}
+  .mslider .ms-arrow svg{width:18px;height:18px;}
+  .mslider .ms-arrow[disabled]{opacity:.3;cursor:not-allowed;}
+  .mslider .ms-arrow[disabled]:hover{background:transparent;color:var(--ink);}
+  @media(max-width:860px){
+    .mcard{flex:0 0 calc((100% - 16px));}
+    .mslider .track{gap:16px;}
+    .team .head-en h2{font-size:48px;}
+  }
+  @media(min-width:861px) and (max-width:1180px){
+    .mcard{flex:0 0 calc((100% - 32px) / 2);}
+  }
 
   /* ===== 9. FAQ ===== */
   .faq{padding:128px 0;background:var(--soft);}
@@ -475,7 +498,7 @@
   /* ===== Why: 階段配置(zigzag staircase) ===== */
   .why{padding:128px 0 128px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;}
   .why .head{max-width:42em;margin:0 auto 80px;text-align:center;}
-  .why-stairs{position:relative;max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:32px;}
+  .why-stairs{position:relative;display:flex;flex-direction:column;gap:32px;}
   .why-stairs::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);transform:translateX(-50%);}
   .why-card{background:var(--bg);border-radius:24px;padding:34px 38px 32px;border:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 16px rgba(0,0,0,.04);max-width:62%;position:relative;}
   .why-card:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(0,0,0,.10);}
@@ -503,7 +526,7 @@
   /* ===== Safety: ?→✓ 変形チェックリスト ===== */
   .safety{padding:128px 0;}
   .safety .head-block{max-width:42em;margin:0 auto 64px;text-align:center;}
-  .safety-board{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1080px;margin:0 auto;}
+  .safety-board{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
   .safety .item{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px 30px 28px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;position:relative;box-shadow:0 2px 8px rgba(0,0,0,.02);transition:transform .3s,box-shadow .3s;}
   .safety .item:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08);}
   .safety .item .mark{position:relative;width:44px;height:44px;flex:none;}
@@ -525,7 +548,7 @@
   /* ===== Contact Detail (連絡先) ===== */
   .contact-detail{padding:96px 0;background:var(--soft);border-top:1px solid var(--line);}
   .contact-detail .head{max-width:38em;margin:0 auto 40px;text-align:center;}
-  .cd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:880px;margin:0 auto;}
+  .cd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
   .cd{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 26px;display:flex;flex-direction:column;gap:8px;box-shadow:0 2px 8px rgba(0,0,0,.02);}
   .cd .ic{width:38px;height:38px;border-radius:50%;background:var(--orange-soft);color:var(--orange);display:flex;align-items:center;justify-content:center;margin-bottom:6px;}
   .cd .ic svg{width:18px;height:18px;}
@@ -541,33 +564,69 @@
   .hd-nav .btn-mini{padding:9px 14px;font-size:11.5px;}
   @media(max-width:960px){.hd-nav .btn-mini{display:none;}}
 
+  /* ===== 左固定 scrollspy サイドナビ ===== */
+  .scrollnav{position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px;mix-blend-mode:normal;}
+  .scrollnav a{display:flex;align-items:center;gap:12px;text-decoration:none;color:rgba(92,87,80,.55);font-size:11px;font-weight:700;letter-spacing:.06em;line-height:1;padding:6px 0;}
+  .scrollnav a .dot{width:8px;height:8px;border-radius:50%;background:rgba(92,87,80,.35);transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .3s,box-shadow .3s;flex:none;}
+  .scrollnav a .lbl{opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s,color .3s;white-space:nowrap;}
+  .scrollnav a:hover{color:var(--ink);}
+  .scrollnav a:hover .lbl{opacity:1;transform:translateX(0);}
+  .scrollnav a:hover .dot{background:var(--orange);}
+  .scrollnav a.active{color:var(--orange);}
+  .scrollnav a.active .dot{background:var(--orange);transform:scale(1.6);box-shadow:0 0 0 4px rgba(232,93,47,.15);}
+  .scrollnav a.active .lbl{opacity:1;transform:translateX(0);}
+  /* ダーク背景セクション内の見え方 */
+  body.dark-section .scrollnav a{color:rgba(255,255,255,.45);}
+  body.dark-section .scrollnav a .dot{background:rgba(255,255,255,.35);}
+  body.dark-section .scrollnav a:hover{color:var(--paper);}
+  body.dark-section .scrollnav a.active{color:#FF8A5E;}
+  body.dark-section .scrollnav a.active .dot{background:#FF8A5E;box-shadow:0 0 0 4px rgba(255,138,94,.18);}
+  @media(max-width:1100px){.scrollnav{display:none;}}
+
   /* ===== VAIZO 説明引用ブロック (stance 内に挿入) ===== */
   .vaizo-quote{border-left:3px solid var(--orange);background:var(--soft);padding:24px 28px;margin:28px 0 8px;border-radius:0 14px 14px 0;}
   .vaizo-quote .ttl{font-weight:800;font-size:16px;letter-spacing:-.005em;margin-bottom:10px;}
   .vaizo-quote p{font-size:13.5px;color:var(--sub);line-height:2;margin:0;}
   .vaizo-quote p + p{margin-top:8px;}
 
-  /* ===== Honesty: 手紙(便箋)風 ===== */
-  .honesty{padding:128px 0;background:var(--soft);}
-  .honesty .letter{max-width:720px;margin:0 auto;background:var(--paper);border-radius:4px;padding:64px 72px 56px;box-shadow:0 30px 70px rgba(0,0,0,.10),0 4px 12px rgba(0,0,0,.04);position:relative;background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(0,0,0,.04) 31px 32px);background-size:100% 32px;background-position:0 64px;}
-  .honesty .letter::before{content:"";position:absolute;top:0;left:0;width:60px;height:60px;background:linear-gradient(135deg,transparent 50%,var(--orange-soft) 50%);border-radius:4px 0 0 0;}
-  .honesty .letter::after{content:"";position:absolute;top:14px;left:14px;width:32px;height:32px;border:2px solid var(--orange);border-radius:50%;color:var(--orange);content:"📨";display:flex;align-items:center;justify-content:center;font-size:14px;display:none;}
-  .honesty .stamp{position:absolute;top:24px;right:32px;width:80px;height:96px;background:var(--orange);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:10px;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;text-align:center;border:3px solid var(--paper);outline:1px dashed var(--orange);transform:rotate(8deg);}
-  .honesty .stamp b{font-size:14px;font-weight:900;margin-bottom:2px;display:block;letter-spacing:0;}
-  .honesty .head{margin-bottom:24px;}
-  .honesty h2{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-weight:700;font-size:clamp(24px,2.8vw,32px);line-height:1.6;letter-spacing:.02em;}
-  .honesty .lead-p{margin-top:20px;font-size:14.5px;color:var(--ink);line-height:2;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;}
-  .honesty .h-list{margin-top:32px;display:flex;flex-direction:column;gap:0;}
-  .honesty .h-item{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:18px 0;border-top:1px dashed var(--line);}
-  .honesty .h-item:first-child{border-top:none;padding-top:8px;}
-  .honesty .h-item .hn{color:var(--orange);font-size:14px;font-weight:800;letter-spacing:.02em;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;}
-  .honesty .h-item h4{font-weight:700;font-size:15px;line-height:1.7;letter-spacing:0;margin-bottom:6px;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;}
-  .honesty .h-item p{font-size:13px;color:var(--sub);line-height:2;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;}
-  .honesty .close{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line);font-size:17px;font-weight:800;text-align:right;letter-spacing:.02em;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;}
-  .honesty .close .o{color:var(--orange);}
-  .honesty .sign{margin-top:18px;text-align:right;font-size:12px;color:var(--sub);font-family:'Yu Mincho','Hiragino Mincho ProN',serif;}
-  .honesty .sign b{display:block;font-size:16px;color:var(--ink);font-weight:700;margin-top:4px;}
-  @media(max-width:760px){.honesty .letter{padding:48px 32px 40px;}.honesty .stamp{width:60px;height:74px;font-size:9px;right:20px;}}
+  /* ===== Honesty: 縦書きの手紙(便箋)風 ===== */
+  .honesty{padding:128px 0;background:linear-gradient(180deg,var(--bg) 0%,#F2EBDE 100%);position:relative;overflow:hidden;}
+  .honesty::before{content:"";position:absolute;left:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.10) 0%,transparent 70%);}
+  .honesty::after{content:"";position:absolute;right:-100px;bottom:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,225,69,.14) 0%,transparent 70%);}
+  .honesty .head-row{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin-bottom:48px;}
+  .honesty .head-row .label{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:11px;letter-spacing:.32em;color:var(--orange);font-weight:700;writing-mode:vertical-rl;text-orientation:mixed;padding:14px 0;}
+  .honesty .head-row h2{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-weight:700;font-size:clamp(34px,5vw,56px);line-height:1.5;letter-spacing:.04em;writing-mode:vertical-rl;text-orientation:upright;color:var(--ink);}
+  .honesty .head-row h2 .accent{color:var(--orange);}
+  .honesty .head-row .stamp{width:96px;height:96px;border:3px double var(--orange);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--orange);font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-weight:700;font-size:11px;letter-spacing:.06em;line-height:1.4;text-align:center;transform:rotate(-8deg);background:rgba(255,255,255,.5);flex:none;}
+  .honesty .head-row .stamp b{font-size:14px;display:block;margin:3px 0;}
+  /* 縦書き本文(便箋風) */
+  .honesty .scroll-wrap{position:relative;z-index:2;display:flex;justify-content:center;padding:8px 0;overflow-x:auto;}
+  .honesty .scroll-wrap::-webkit-scrollbar{height:4px;}
+  .honesty .scroll-wrap::-webkit-scrollbar-thumb{background:var(--orange-soft);border-radius:99px;}
+  .honesty .letter{writing-mode:vertical-rl;text-orientation:mixed;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;background:var(--paper);padding:64px 56px;box-shadow:0 30px 70px rgba(0,0,0,.10),0 4px 12px rgba(0,0,0,.04);background-image:repeating-linear-gradient(to left,transparent 0 33px,rgba(0,0,0,.045) 33px 34px);background-size:34px 100%;background-position:right top;min-width:640px;max-height:none;}
+  .honesty .letter .opener{font-size:18px;line-height:2.4;letter-spacing:.06em;color:var(--ink);font-weight:500;}
+  .honesty .letter .opener .br{display:inline-block;height:1.5em;}
+  .honesty .letter .opener .ka{color:var(--orange);font-weight:700;}
+  .honesty .letter .body{margin-top:0;margin-right:28px;display:flex;flex-direction:row-reverse;gap:30px;}
+  .honesty .letter .body .para{font-size:14.5px;line-height:2.2;letter-spacing:.06em;color:var(--ink);font-weight:500;}
+  .honesty .letter .body .para .num{display:block;color:var(--orange);font-size:16px;font-weight:700;margin-bottom:8px;}
+  .honesty .letter .body .para .pttl{font-weight:700;color:var(--ink);}
+  .honesty .letter .body .para .pdet{color:var(--sub);font-size:13px;}
+  .honesty .letter .close{margin-right:28px;font-size:18px;font-weight:700;letter-spacing:.08em;color:var(--ink);}
+  .honesty .letter .close .o{color:var(--orange);}
+  .honesty .letter .sign{margin-right:24px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
+  .honesty .letter .sign .date{font-size:11px;color:var(--sub);letter-spacing:.1em;}
+  .honesty .letter .sign .name{font-size:18px;font-weight:700;color:var(--ink);writing-mode:vertical-rl;letter-spacing:.16em;}
+  .honesty .letter .sign .role{font-size:10px;color:var(--sub);letter-spacing:.08em;}
+  @media(max-width:760px){
+    /* モバイルでは横書きに自動切り替え */
+    .honesty .head-row{flex-direction:column;align-items:flex-start;gap:24px;}
+    .honesty .head-row .label,.honesty .head-row h2{writing-mode:horizontal-tb;text-orientation:mixed;}
+    .honesty .letter{writing-mode:horizontal-tb;background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(0,0,0,.045) 31px 32px);background-size:100% 32px;padding:40px 28px;min-width:0;}
+    .honesty .letter .body{flex-direction:column;margin-right:0;margin-top:24px;gap:20px;}
+    .honesty .letter .sign .name{writing-mode:horizontal-tb;}
+    .honesty .scroll-wrap{padding:0;}
+  }
 
   /* ===== 料金スライダー(インタラクティブ計算機) ===== */
   .price-calc{margin-top:36px;background:linear-gradient(135deg,var(--ink) 0%,#2a2622 100%);color:var(--paper);border-radius:28px;padding:48px;position:relative;overflow:hidden;}
@@ -607,6 +666,20 @@
 </style>
 </head>
 <body>
+
+<!-- 左固定 scrollspy サイドナビ -->
+<nav class="scrollnav" aria-label="セクションナビ">
+  <a href="#services" data-sec="services"><span class="dot"></span><span class="lbl">サービス</span></a>
+  <a href="#problems" data-sec="problems"><span class="dot"></span><span class="lbl">あきらめ</span></a>
+  <a href="#stance" data-sec="stance"><span class="dot"></span><span class="lbl">スタンス</span></a>
+  <a href="#why" data-sec="why"><span class="dot"></span><span class="lbl">強み</span></a>
+  <a href="#safety" data-sec="safety"><span class="dot"></span><span class="lbl">安心</span></a>
+  <a href="#pricing" data-sec="pricing"><span class="dot"></span><span class="lbl">料金</span></a>
+  <a href="#team" data-sec="team"><span class="dot"></span><span class="lbl">メンバー</span></a>
+  <a href="#honesty" data-sec="honesty"><span class="dot"></span><span class="lbl">正直に</span></a>
+  <a href="#faq" data-sec="faq"><span class="dot"></span><span class="lbl">FAQ</span></a>
+  <a href="#contact-detail" data-sec="contact-detail"><span class="dot"></span><span class="lbl">お問合せ</span></a>
+</nav>
 
 <!-- 0. ヘッダ -->
 <header>
@@ -718,7 +791,7 @@
 </section>
 
 <!-- 4. あきらめていませんか × 3 -->
-<section class="problems">
+<section class="problems" id="problems">
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Common pain</div>
@@ -780,27 +853,25 @@
       </div>
     </div>
 
-    <!-- 4原則: 散らしたメモ風 -->
-    <div class="principles reveal-group">
-      <div class="pnote">
-        <span class="pin"></span>
-        <div class="pn">i.</div>
-        <h4>決裁が通る金額に。</h4>
-      </div>
-      <div class="pnote">
-        <span class="pin"></span>
-        <div class="pn">ii.</div>
-        <h4>運用はAI×人で回す。</h4>
-      </div>
-      <div class="pnote">
-        <span class="pin"></span>
-        <div class="pn">iii.</div>
-        <h4>決裁者が読める言葉で。</h4>
-      </div>
-      <div class="pnote">
-        <span class="pin"></span>
-        <div class="pn">iv.</div>
-        <h4>公開後を、値上げしない。</h4>
+    <!-- 4原則: 横線で区切った宣言列(カード廃止) -->
+    <div class="principles-wrap reveal-group">
+      <div class="principles">
+        <div class="pnote">
+          <div class="pn">i.</div>
+          <h4>決裁が通る金額に。</h4>
+        </div>
+        <div class="pnote">
+          <div class="pn">ii.</div>
+          <h4>運用はAI×人で回す。</h4>
+        </div>
+        <div class="pnote">
+          <div class="pn">iii.</div>
+          <h4>決裁者が読める言葉で。</h4>
+        </div>
+        <div class="pnote">
+          <div class="pn">iv.</div>
+          <h4>公開後を、値上げしない。</h4>
+        </div>
       </div>
     </div>
   </div>
@@ -818,7 +889,7 @@
       <div class="why-card reveal">
         <div class="pillar-block">
           <div class="pillar-en">Affordable</div>
-          <div class="pillar-jp">安<span class="o">い</span></div>
+          <div class="pillar-jp"><span class="o">安</span>い</div>
         </div>
         <div class="text-block">
           <h3>TOP一式 ¥250,000 から始められる。</h3>
@@ -828,7 +899,7 @@
       <div class="why-card reveal">
         <div class="pillar-block">
           <div class="pillar-en">Fast</div>
-          <div class="pillar-jp">早<span class="o">い</span></div>
+          <div class="pillar-jp"><span class="o">早</span>い</div>
         </div>
         <div class="text-block">
           <h3>構成決定後、すぐに動き始める。</h3>
@@ -838,7 +909,7 @@
       <div class="why-card reveal">
         <div class="pillar-block">
           <div class="pillar-en">Beautiful</div>
-          <div class="pillar-jp">きれ<span class="o">い</span></div>
+          <div class="pillar-jp"><span class="o">き</span>れい</div>
         </div>
         <div class="text-block">
           <h3>デザイナーを、自分で指名できる。</h3>
@@ -850,56 +921,7 @@
 </section>
 
 <!-- 6. 制作プロセス -->
-<section class="flow">
-  <div class="inner">
-    <div class="head reveal">
-      <div class="h-eye">Process</div>
-      <h2>ご相談から公開、運用まで。</h2>
-    </div>
-    <div class="flow-timeline">
-      <div class="fstep reveal">
-        <div class="fcontent">
-          <h4>無料相談</h4>
-          <p>メール一通から。やりたいこと・現状を伺います。</p>
-        </div>
-        <div class="fnum"><div class="fdot">i</div></div>
-        <div class="spacer"></div>
-      </div>
-      <div class="fstep reveal">
-        <div class="spacer"></div>
-        <div class="fnum"><div class="fdot">ii</div></div>
-        <div class="fcontent">
-          <h4>ヒアリング・見積</h4>
-          <p>目的・予算・公開時期をすり合わせ。明朗な見積を提示。</p>
-        </div>
-      </div>
-      <div class="fstep reveal">
-        <div class="fcontent">
-          <h4>構成・デザイン・実装</h4>
-          <p>こまめに確認しながら進行。決裁者が読める言葉で。</p>
-        </div>
-        <div class="fnum"><div class="fdot">iii</div></div>
-        <div class="spacer"></div>
-      </div>
-      <div class="fstep reveal">
-        <div class="spacer"></div>
-        <div class="fnum"><div class="fdot">iv</div></div>
-        <div class="fcontent">
-          <h4>公開</h4>
-          <p>スマホ・検索チェック後に公開。社内向け操作説明も。</p>
-        </div>
-      </div>
-      <div class="fstep reveal">
-        <div class="fcontent">
-          <h4>AI運用</h4>
-          <p>月3万円ぽっきりで、AIが運用に同梱。改善し続けます。</p>
-        </div>
-        <div class="fnum"><div class="fdot">v</div></div>
-        <div class="spacer"></div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Flow セクション削除済 (差別化要素薄く、Safety/FAQで進め方は補完済) -->
 
 <!-- 6b. Safety(失敗予防 ?→✓ 変形) -->
 <section class="safety" id="safety">
@@ -1088,98 +1110,114 @@
 <!-- 8. メンバー -->
 <section class="team" id="team">
   <div class="inner">
-    <div class="head reveal">
-      <div class="h-eye">Members</div>
-      <h2 class="h-md">結局は、<span class="o">人</span>で選びたい。</h2>
+    <div class="head-en reveal r-left">
+      <div class="eyeb">Members ／ 結局は、人で選びたい。</div>
+      <h2>Member <span class="o">Interview</span></h2>
       <p class="hint">この事業に関わる5名です。相性の良さそうなディレクターを、あなたから指名できます。</p>
     </div>
-  </div>
-  <div class="polaroid-stage reveal-group">
-    <div class="mcard">
-      <div class="ph"><img src="assets/photos/members/member_hashimoto.jpg" alt="橋本友太郎" style="object-position:center 30%;"></div>
-      <div class="bd">
-        <div class="role">VAIZO 代表取締役</div>
-        <div class="nm">橋本 友太郎<span class="en">HASHIMOTO YUTARO</span></div>
-        <!-- TODO: 業種×業務タグに差し替え(本人確認後)。候補: 経営者向けヒアリング / 補助金書類設計 / 事業構造の整理 -->
-        <div class="tags"><span>事業設計</span><span>経営×現場</span><span>AI活用</span></div>
-        <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（橋本さん指名）">この人に相談する</a>
+
+    <div class="mslider" id="memberSlider">
+      <div class="track-wrap">
+        <div class="track" id="msTrack">
+          <div class="mcard" data-idx="0">
+            <div class="ph"><img src="assets/photos/members/member_hashimoto.jpg" alt="橋本友太郎" style="object-position:center 30%;"></div>
+            <div class="content">
+              <div class="role">VAIZO 代表取締役</div>
+              <div class="nm">橋本 友太郎<span class="en">HASHIMOTO YUTARO</span></div>
+              <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
+              <div class="tags"><span>事業設計</span><span>経営×現場</span><span>AI活用</span></div>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（橋本さん指名）">この人に相談する</a>
+            </div>
+          </div>
+          <div class="mcard" data-idx="1">
+            <div class="ph"><img src="assets/photos/members/member_sakurai.jpg" alt="櫻井理也" style="object-position:center 25%;"></div>
+            <div class="content">
+              <div class="role">VAIZO 代表取締役</div>
+              <div class="nm">櫻井 理也<span class="en">SAKURAI MICHIYA</span></div>
+              <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
+              <div class="tags"><span>開発</span><span>システム</span><span>実装</span></div>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（櫻井さん指名）">この人に相談する</a>
+            </div>
+          </div>
+          <div class="mcard" data-idx="2">
+            <div class="ph"><img src="assets/photos/members/member_masuya.png" alt="MASUYA一成" style="object-position:center 30%;"></div>
+            <div class="content">
+              <div class="role">OneBe 代表（制作パートナー）</div>
+              <div class="nm">舛谷 一成<span class="en">MASUYA ISSEI</span></div>
+              <div class="tags"><span>ブランディング</span><span>Web</span><span>SNS・動画</span></div>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（MASUYAさん指名）">この人に相談する</a>
+            </div>
+          </div>
+          <div class="mcard" data-idx="3">
+            <div class="ph"><img src="assets/photos/members/member_kamizono.png" alt="KAMIZONO" style="object-position:center 20%;"></div>
+            <div class="content">
+              <div class="role">デザイナー／プログラマー</div>
+              <div class="nm">KAMIZONO<span class="en">KAMIZONO</span></div>
+              <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
+              <div class="tags"><span>Web制作</span><span>ECサイト</span><span>デザイン×実装</span></div>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（KAMIZONOさん指名）">この人に相談する</a>
+            </div>
+          </div>
+          <div class="mcard" data-idx="4">
+            <div class="ph"><img src="assets/photos/members/member_hinano.jpg" alt="HINANO" style="object-position:center top;"></div>
+            <div class="content">
+              <div class="role">デザイナー／SNSマーケター</div>
+              <div class="nm">HINANO<span class="en">HINANO</span></div>
+              <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
+              <div class="tags"><span>SNS</span><span>若年層訴求</span><span>トレンド感</span></div>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（HINANOさん指名）">この人に相談する</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="mcard">
-      <div class="ph"><img src="assets/photos/members/member_sakurai.jpg" alt="櫻井理也" style="object-position:center 25%;"></div>
-      <div class="bd">
-        <div class="role">VAIZO 代表取締役</div>
-        <div class="nm">櫻井 理也<span class="en">SAKURAI MICHIYA</span></div>
-        <!-- TODO: 業種×業務タグに差し替え(本人確認後)。候補: システム実装 / インフラ・運用設計 / セキュリティ -->
-        <div class="tags"><span>開発</span><span>システム</span><span>実装</span></div>
-        <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（櫻井さん指名）">この人に相談する</a>
-      </div>
-    </div>
-    <div class="mcard">
-      <div class="ph"><img src="assets/photos/members/member_masuya.png" alt="MASUYA一成" style="object-position:center 30%;"></div>
-      <div class="bd">
-        <div class="role">OneBe 代表（制作パートナー）</div>
-        <div class="nm">舛谷 一成<span class="en">MASUYA ISSEI</span></div>
-        <div class="tags"><span>ブランディング</span><span>Web</span><span>SNS・動画</span></div>
-        <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（MASUYAさん指名）">この人に相談する</a>
-      </div>
-    </div>
-    <div class="mcard">
-      <div class="ph"><img src="assets/photos/members/member_kamizono.png" alt="KAMIZONO" style="object-position:center 20%;"></div>
-      <div class="bd">
-        <div class="role">デザイナー／プログラマー</div>
-        <div class="nm">KAMIZONO<span class="en">KAMIZONO</span></div>
-        <!-- TODO: 業種×業務タグに差し替え(本人確認後)。候補: EC構築 / デザイン×実装 / WordPress -->
-        <div class="tags"><span>Web制作</span><span>ECサイト</span><span>デザイン×実装</span></div>
-        <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（KAMIZONOさん指名）">この人に相談する</a>
-      </div>
-    </div>
-    <div class="mcard">
-      <div class="ph"><img src="assets/photos/members/member_hinano.jpg" alt="HINANO" style="object-position:center top;"></div>
-      <div class="bd">
-        <div class="role">デザイナー／SNSマーケター</div>
-        <div class="nm">HINANO<span class="en">HINANO</span></div>
-        <!-- TODO: 業種×業務タグに差し替え(本人確認後)。候補: SNS連動LP / 若年層向けデザイン / 動画・写真 -->
-        <div class="tags"><span>SNS</span><span>若年層訴求</span><span>トレンド感</span></div>
-        <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（HINANOさん指名）">この人に相談する</a>
+      <div class="ms-nav">
+        <div class="ms-counter"><span class="cur" id="msCur">01</span><span class="sep">/</span><span class="total" id="msTotal">05</span></div>
+        <div class="ms-arrows">
+          <button class="ms-arrow" id="msPrev" aria-label="前のメンバー"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="ms-arrow" id="msNext" aria-label="次のメンバー"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 8b. Honesty(正直に申し上げます) -->
+<!-- 8b. Honesty(正直に申し上げます / 縦書き便箋風) -->
 <section class="honesty" id="honesty">
   <div class="inner">
-    <div class="wrap">
-      <div class="head reveal">
-        <div class="h-eye">Honesty</div>
-        <h2>正直に申し上げます。</h2>
+    <div class="head-row reveal">
+      <span class="label">Honesty / 一筆、申し上げます</span>
+      <h2>正直に、<span class="accent">申</span>し上げます。</h2>
+      <div class="stamp">実績<br><b>0件</b><br>未満</div>
+    </div>
+    <div class="scroll-wrap reveal r-fade">
+      <div class="letter">
+        <div class="opener">
+          V/ENTER WEB は、二〇二六年に<span class="ka">始まったばかり</span>の新しい事業です。<br>公開できる制作実績は、まだ十分にありません。<br>代わりに、いま私たちが差し出せるものを三つ、はっきりお伝えします。
+        </div>
+        <div class="body">
+          <div class="para">
+            <span class="num">一.</span>
+            <span class="pttl">このLPと自社サイトが、私たちの制作物そのものです。</span><br>
+            <span class="pdet">このページ・vaizo.jp のデザイン・コピー・実装は、すべて私たちの手によるものです。スクロールしてご覧になったクオリティが、提供水準です。</span>
+          </div>
+          <div class="para">
+            <span class="num">二.</span>
+            <span class="pttl">初期パートナー価格は、長く据え置きます。</span><br>
+            <span class="pdet">月三万円ぽっきりは、契約が続く限り変更しません。実績を一緒に作っていただく時期だからこその価格です。</span>
+          </div>
+          <div class="para">
+            <span class="num">三.</span>
+            <span class="pttl">「合わない」と感じたら、いつでも降りられます。</span><br>
+            <span class="pdet">公開前のキャンセル、契約後の担当変更、六ヶ月後の解約。すべて違約金なしで対応します。</span>
+          </div>
+        </div>
+        <div class="close">実績が無い時期こそ、<span class="o">一番真剣にやります</span>。</div>
+        <div class="sign">
+          <span class="date">二〇二六年 五月</span>
+          <span class="name">橋本 友太郎</span>
+          <span class="role">株式会社VAIZO 代表取締役</span>
+        </div>
       </div>
-      <p class="lead-p reveal">V/ENTER WEB は、2026年に始まったばかりの新しい事業です。公開できる制作実績は、まだ十分にありません。<br>代わりに、いま私たちが差し出せるものを3つ、はっきりお伝えします。</p>
-      <div class="h-list reveal">
-        <div class="h-item">
-          <div class="hn">a.</div>
-          <div>
-            <h4>このLPと自社サイトが、私たちの制作物そのものです。</h4>
-            <p>このページ・vaizo.jp のデザイン・コピー・実装は、すべて私たちの手によるものです。スクロールしてご覧になったクオリティが、提供水準です。</p>
-          </div>
-        </div>
-        <div class="h-item">
-          <div class="hn">b.</div>
-          <div>
-            <h4>初期パートナー価格は、長く据え置きます。</h4>
-            <p>月3万円ぽっきりは、契約が続く限り変更しません。実績を一緒に作っていただく時期だからこその価格です。</p>
-          </div>
-        </div>
-        <div class="h-item">
-          <div class="hn">c.</div>
-          <div>
-            <h4>「合わない」と感じたら、いつでも降りられます。</h4>
-            <p>公開前のキャンセル、契約後の担当変更、6ヶ月後の解約。すべて違約金なしで対応します。</p>
-          </div>
-        </div>
-      </div>
-      <p class="close reveal">実績が無い時期こそ、<span class="o">一番真剣にやります</span>。</p>
     </div>
   </div>
 </section>
@@ -1302,6 +1340,75 @@
 <script>
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal, .reveal-group').forEach(el=>io.observe(el));
+
+  // scrollspy: 左固定ナビの現在地ハイライト＋ダークセクション内の白文字化
+  const snLinks = Array.from(document.querySelectorAll('.scrollnav a'));
+  const snSections = snLinks.map(a => document.querySelector(a.getAttribute('href'))).map((el, i) => el ? {el, link: snLinks[i]} : null).filter(Boolean);
+  const darkSelectors = ['.ai-band', '.flow', 'footer', '.final'];
+  const updateScrollnav = () => {
+    const y = window.scrollY + window.innerHeight * 0.35;
+    let cur = null;
+    snSections.forEach(s => { if (s.el.offsetTop <= y) cur = s.link; });
+    snLinks.forEach(a => a.classList.toggle('active', a === cur));
+    // ダークセクション中はサイドナビを白系に
+    let inDark = false;
+    const yp = window.scrollY + window.innerHeight * 0.5;
+    darkSelectors.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => {
+        const top = el.offsetTop, bot = top + el.offsetHeight;
+        if (yp >= top && yp <= bot) inDark = true;
+      });
+    });
+    document.body.classList.toggle('dark-section', inDark);
+  };
+  window.addEventListener('scroll', updateScrollnav, {passive:true});
+  window.addEventListener('resize', updateScrollnav);
+  updateScrollnav();
+
+  // Member Interview slider (nexus風: 中央フォーカス・両側グレースケール)
+  (() => {
+    const slider = document.getElementById('memberSlider');
+    if (!slider) return;
+    const track = slider.querySelector('#msTrack');
+    const cards = Array.from(track.querySelectorAll('.mcard'));
+    const cur = slider.querySelector('#msCur');
+    const total = slider.querySelector('#msTotal');
+    const prev = slider.querySelector('#msPrev');
+    const next = slider.querySelector('#msNext');
+    let active = 0;
+    total.textContent = String(cards.length).padStart(2,'0');
+
+    const setActive = (i) => {
+      active = Math.max(0, Math.min(cards.length - 1, i));
+      cards.forEach((c, idx) => c.classList.toggle('is-center', idx === active));
+      cur.textContent = String(active + 1).padStart(2,'0');
+      // 中央のカードがビューに来るように track をシフト
+      // 3枚見せでの基準: active を中央列に
+      const card = cards[active];
+      const wrap = slider.querySelector('.track-wrap');
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      const cardW = card.offsetWidth;
+      const wrapW = wrap.offsetWidth;
+      // active カードを中央列に置く: wrapper中央 - card中央 = translateX
+      const targetX = (wrapW / 2) - (card.offsetLeft + cardW / 2);
+      track.style.transform = `translateX(${targetX}px)`;
+      // ボタン disabled は loop なしバージョンの場合のみ。今回はloop風(端で止まる)
+      prev.disabled = active === 0;
+      next.disabled = active === cards.length - 1;
+    };
+
+    cards.forEach((c, idx) => {
+      c.addEventListener('click', () => setActive(idx));
+    });
+    prev.addEventListener('click', () => setActive(active - 1));
+    next.addEventListener('click', () => setActive(active + 1));
+
+    // 初期は中央(2番目)を active に
+    const init = () => setActive(Math.min(2, cards.length - 1));
+    if (document.readyState === 'complete') init();
+    else window.addEventListener('load', init);
+    window.addEventListener('resize', () => setActive(active));
+  })();
 
   // ヒーロースライドショー(8秒ごとにcrossfade + slow zoom)
   const hslides = document.querySelectorAll('#heroSlideshow .slide');
