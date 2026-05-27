@@ -287,54 +287,30 @@
     .prob.p2{transform:rotate(var(--tilt))!important;}
   }
 
-  /* ===== 5. Stance: エディトリアル雑誌スプレッド ===== */
-  .stance{padding:120px 0 140px;position:relative;overflow:hidden;background:
-    radial-gradient(ellipse 60% 40% at 12% 18%, rgba(232,93,47,.08) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 90% 75%, rgba(255,225,69,.10) 0%, transparent 60%),
-    var(--bg);}
-  /* 上部 marquee 帯 */
-  .stance .ticker{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink);color:var(--paper);padding:18px 0;margin-bottom:80px;}
-  .stance .ticker .track{display:inline-flex;gap:48px;white-space:nowrap;animation:tickerMove 28s linear infinite;font-size:22px;font-weight:900;letter-spacing:.04em;font-style:italic;}
-  .stance .ticker .track span{display:inline-flex;align-items:center;gap:48px;}
-  .stance .ticker .track .o{color:#FF8A5E;}
-  .stance .ticker .track .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
-  @keyframes tickerMove{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-  /* メインエディトリアル */
-  .stance .spread{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start;}
-  .stance .spread .label{display:inline-block;font-size:11px;color:var(--orange);font-weight:800;letter-spacing:.22em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--orange);border-radius:99px;margin-bottom:28px;}
-  .stance .big-quote{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-weight:700;font-size:clamp(34px,5.4vw,68px);line-height:1.45;letter-spacing:.01em;color:var(--ink);position:relative;}
-  .stance .big-quote::before{content:"「";position:absolute;left:-44px;top:-20px;font-size:1em;color:var(--orange);opacity:.4;font-weight:400;}
-  .stance .big-quote::after{content:"」";display:inline-block;color:var(--orange);opacity:.4;font-weight:400;margin-left:4px;}
-  .stance .big-quote .pop{display:inline-block;background:var(--yellow);color:var(--ink);padding:0 12px;transform:rotate(-1deg);box-decoration-break:clone;-webkit-box-decoration-break:clone;border-radius:6px;}
-  .stance .big-quote .o{color:var(--orange);}
-  .stance .by{margin-top:32px;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:14px;color:var(--sub);font-style:italic;letter-spacing:.04em;}
-  .stance .by::before{content:"— ";color:var(--orange);}
-  /* 右コラム: スタンプ + 散らした要素 */
-  .stance .side{position:relative;padding-top:36px;}
-  .stance .stamp-mark{position:absolute;top:-30px;right:0;width:120px;height:120px;border:3px solid var(--orange);border-radius:50%;color:var(--orange);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:11px;letter-spacing:.12em;line-height:1.4;text-align:center;transform:rotate(-12deg);text-transform:uppercase;background:rgba(255,255,255,.6);backdrop-filter:blur(2px);}
-  .stance .stamp-mark b{font-size:22px;display:block;margin:4px 0;letter-spacing:-.02em;}
-  .stance .vaizo-note{margin-top:60px;padding-top:20px;border-top:1px solid var(--orange);position:relative;}
-  .stance .vaizo-note::before{content:"VAIZO ／ 会社のこと";position:absolute;top:-9px;left:0;background:var(--bg);color:var(--orange);font-size:10px;letter-spacing:.18em;font-weight:800;padding:0 10px 0 0;}
-  .stance .vaizo-note p{font-size:13.5px;color:var(--sub);line-height:1.95;}
-  .stance .vaizo-note p + p{margin-top:10px;}
-  .stance .vaizo-note .keyw{color:var(--ink);font-weight:800;}
-  /* 4原則: 横ライン区切りの宣言列(カード廃止) */
-  .stance .principles{display:grid;grid-template-columns:repeat(4,1fr);}
-  .stance .pnote{padding:32px 28px;border-left:1px solid var(--line);position:relative;transition:background .3s;}
-  .stance .pnote:first-child{border-left:none;}
-  .stance .pnote:hover{background:rgba(232,93,47,.04);}
-  .stance .pnote .pn{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-style:italic;color:var(--orange);font-size:36px;font-weight:700;line-height:1;margin-bottom:18px;letter-spacing:-.02em;}
-  .stance .pnote h4{font-weight:800;font-size:16px;line-height:1.55;letter-spacing:-.005em;color:var(--ink);}
-  /* 4原則の上下に横線 */
-  .stance .principles-wrap{margin-top:96px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);}
-  .stance .principles-wrap .principles{margin-top:0;}
+  /* ===== 5. Stance: マニフェスト型(装飾全廃・型の力だけ) ===== */
+  .stance{padding:180px 0 200px;background:var(--paper);}
+  .stance .eyeb{font-size:11px;color:var(--orange);letter-spacing:.32em;font-weight:800;text-transform:uppercase;margin-bottom:60px;display:inline-flex;align-items:center;gap:14px;}
+  .stance .eyeb::before{content:"";width:48px;height:1.5px;background:var(--orange);}
+  .stance .punch{font-weight:900;font-size:clamp(38px,6.4vw,96px);line-height:1.22;letter-spacing:-.03em;color:var(--ink);margin:0;}
+  .stance .punch .ser{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-style:italic;font-weight:600;color:var(--orange);}
+  .stance .punch .ul{position:relative;display:inline-block;}
+  .stance .punch .ul::after{content:"";position:absolute;left:-6px;right:-6px;bottom:8px;height:18px;background:var(--yellow);z-index:-1;transform:skewX(-3deg);}
+  .stance .punch .nw{color:var(--orange);}
+  .stance .annot{margin-top:88px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);}
+  .stance .annot .a{padding:28px 36px 0 0;border-right:1px solid var(--line);}
+  .stance .annot .a:last-child{border-right:none;padding-right:0;}
+  .stance .annot .a:not(:first-child){padding-left:36px;}
+  .stance .annot .a .num{font-size:clamp(28px,3.4vw,42px);font-weight:900;letter-spacing:-.02em;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;margin-bottom:14px;}
+  .stance .annot .a .num .y{color:var(--orange);}
+  .stance .annot .a .num .u{font-size:.5em;color:var(--sub);font-weight:600;margin-left:4px;}
+  .stance .annot .a p{font-size:14px;color:var(--sub);line-height:1.95;}
+  .stance .annot .a p b{color:var(--ink);font-weight:700;}
   @media(max-width:860px){
-    .stance .spread{grid-template-columns:1fr;gap:36px;}
-    .stance .big-quote::before{position:static;display:inline;}
-    .stance .stamp-mark{top:auto;right:auto;left:0;margin-top:20px;position:relative;}
-    .stance .principles{grid-template-columns:1fr 1fr;}
-    .stance .pnote{border-left:none;border-top:1px solid var(--line);}
-    .stance .pnote:nth-child(-n+2){border-top:none;}
+    .stance{padding:120px 0 140px;}
+    .stance .annot{grid-template-columns:1fr;gap:0;}
+    .stance .annot .a{border-right:none;border-bottom:1px solid var(--line);padding:22px 0;}
+    .stance .annot .a:not(:first-child){padding-left:0;padding-top:22px;}
+    .stance .annot .a:last-child{border-bottom:none;}
   }
 
   /* ===== 6. Flow: 縦タイムライン(L/R交互+中央線) ===== */
@@ -829,49 +805,28 @@
 
 <!-- 5. VAIZOの考え方 -->
 <section class="stance" id="stance">
-  <!-- 上部 marqueeチッカー -->
-  <div class="ticker" aria-hidden="true">
-    <div class="track">
-      <span>OUR STANCE<span class="dot"></span><span class="o">"安いから品質が落ちる"</span><span class="dot"></span>AIで覆す<span class="dot"></span>WEB制作の人件費を畳む話<span class="dot"></span></span>
-      <span>OUR STANCE<span class="dot"></span><span class="o">"安いから品質が落ちる"</span><span class="dot"></span>AIで覆す<span class="dot"></span>WEB制作の人件費を畳む話<span class="dot"></span></span>
-    </div>
-  </div>
-
   <div class="inner">
-    <!-- メインエディトリアル -->
-    <div class="spread">
-      <div class="reveal r-left">
-        <span class="label">Our stance</span>
-        <h2 class="big-quote">"安いから、<br><span class="pop">品質が落ちる</span>" を、<br><span class="o">AI</span>で覆します。</h2>
-        <p class="by">Web制作の人件費を畳む話。</p>
-      </div>
-      <div class="side reveal r-right">
-        <div class="stamp-mark">人件費<br><b>78%</b><br>畳めます</div>
-        <div class="vaizo-note">
-          <p><span class="keyw">株式会社VAIZO</span>は、AIの実装・運用を本業とする会社です。中でも V/ENTER WEB は、中小企業の「Webの遅れ」を、AIで作った<span class="keyw">余白</span>で取り戻すために立ち上げた事業です。</p>
-        </div>
-      </div>
+    <div class="reveal">
+      <div class="eyeb">Our stance</div>
+      <h2 class="punch">
+        Web制作の値段は、<br>
+        ほとんどが <span class="ul">人件費</span>です。<br>
+        私たちは、その分を、<br>
+        <span class="ser">AIに、任せます。</span>
+      </h2>
     </div>
-
-    <!-- 4原則: 横線で区切った宣言列(カード廃止) -->
-    <div class="principles-wrap reveal-group">
-      <div class="principles">
-        <div class="pnote">
-          <div class="pn">i.</div>
-          <h4>決裁が通る金額に。</h4>
-        </div>
-        <div class="pnote">
-          <div class="pn">ii.</div>
-          <h4>運用はAI×人で回す。</h4>
-        </div>
-        <div class="pnote">
-          <div class="pn">iii.</div>
-          <h4>決裁者が読める言葉で。</h4>
-        </div>
-        <div class="pnote">
-          <div class="pn">iv.</div>
-          <h4>公開後を、値上げしない。</h4>
-        </div>
+    <div class="annot reveal-group">
+      <div class="a">
+        <div class="num">¥<span class="y">250,000</span><span class="u">〜</span></div>
+        <p><b>初期費用</b>は、人件費を畳んだ結果。決裁が通る金額から始まります。</p>
+      </div>
+      <div class="a">
+        <div class="num">¥<span class="y">30,000</span><span class="u">／月</span></div>
+        <p><b>運用</b>は、AIの下書き + 人の最終確認で回す。Web担当の新規採用は不要です。</p>
+      </div>
+      <div class="a">
+        <div class="num"><span class="y">そのまま</span></div>
+        <p><b>品質</b>は、落としません。情報設計と決裁者向けの説明だけは、人が手を抜かない。</p>
       </div>
     </div>
   </div>
