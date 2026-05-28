@@ -71,6 +71,12 @@
   .h-sm{font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1.4;letter-spacing:-.01em;}
   .lead{font-size:clamp(15px,1.55vw,16.5px);color:var(--sub);line-height:1.95;}
   .o{color:var(--orange);}
+  /* レスポンシブ改行制御 */
+  .br-pc{display:inline;}
+  @media(max-width:760px){.br-pc{display:none;}}
+  .br-mb{display:none;}
+  @media(max-width:760px){.br-mb{display:inline;}}
+  .nb{white-space:nowrap;}
 
   /* ===== ボタン(pill型) ===== */
   .btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;padding:14px 28px;border-radius:999px;transition:.2s;cursor:pointer;border:1.5px solid transparent;font-family:var(--sans);line-height:1.2;}
@@ -704,7 +710,7 @@
     <div class="wrap">
       <div class="label">AI EMBEDDED</div>
       <div class="body">
-        <h2><span class="kk">公開</span>して、<span class="ow">終わらせない</span>。<br><span class="kk">後悔</span>して、<span class="ow">終わらせない</span>。</h2>
+        <h2><span class="kk">公開</span>して、<span class="ow nb">終わらせない</span>。<br><span class="kk">後悔</span>して、<span class="ow nb">終わらせない</span>。</h2>
         <p>Webサイトは、<span class="keyword">公開してからが本番</span>です。「公開して納品終了」の制作会社に頼むと、半年後もお知らせは去年のまま、採用ページの応募は来ないまま、サイトは古いまま放置されます。月3万円の保守の中で、AIがお知らせ記事・問合せ返信・検索広告の改善案の下書きを作り、最終確認は人が行います。サイトの更新は、止まりません。</p>
         <div class="ai-list">
           <div><b>お知らせの下書き</b><span>更新ネタからAIがリライト案を作成。担当者は内容を確認して公開。</span></div>
@@ -721,7 +727,7 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Services</div>
-      <h2 class="h-md">コーポ・採用・AI運用の<br>3 本立てで、会社の Web を<span class="o">支えます</span>。</h2>
+      <h2 class="h-md">コーポ・採用・AI運用の<br class="br-pc">3 本立てで、会社の Web を<span class="o">支えます</span>。</h2>
     </div>
     <div class="svc-row reveal-group">
       <div class="svc">
@@ -754,7 +760,7 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Common pain</div>
-      <h2 class="h-md">こんな状態、<br><span class="o">あきらめていませんか。</span></h2>
+      <h2 class="h-md">こんな状態、<br class="br-pc"><span class="o nb">あきらめていませんか。</span></h2>
     </div>
     <p class="sub-note reveal">想定されるご相談例</p>
     <div class="prob-cloud">
@@ -793,9 +799,9 @@
     <div class="reveal">
       <div class="eyeb">Our stance</div>
       <h2 class="punch">
-        Web制作の値段は、ほとんどが <span class="ul">人件費</span>です。<br>
-        私たちは、人がやらなくていい作業を <span class="ser">AI</span> に任せます。<br>
-        人にしかできない判断と、決裁者向けの説明だけは、<br>
+        Web制作の値段は、ほとんどが <span class="ul">人件費</span>です。<br class="br-pc">
+        私たちは、人がやらなくていい作業を <span class="ser">AI</span> に任せます。<br class="br-pc">
+        人にしかできない判断と、決裁者向けの説明だけは、<br class="br-pc">
         必ず人が担当します。
       </h2>
     </div>
@@ -807,7 +813,7 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Materials</div>
-      <h2 class="h-md">決裁を通すための資料、<br><span class="o">こちらで用意します</span>。</h2>
+      <h2 class="h-md">決裁を通すための資料、<br class="br-pc"><span class="o">こちらで用意します</span>。</h2>
     </div>
     <div class="mat-grid reveal-group">
       <div class="mat-card">
@@ -837,7 +843,7 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Why V/ENTER WEB</div>
-      <h2 class="h-md">安い・早い・きれい。<br>普通は1つを諦めますが、<br>AIに任せられる作業を増やして、<span class="o">3つすべて</span>を実現します。</h2>
+      <h2 class="h-md">安い・早い・きれい。<br class="br-pc">普通は1つを諦めますが、<br class="br-pc">AIに任せられる作業を増やして、<span class="o nb">3つすべて</span>を実現します。</h2>
       <p class="lead" style="margin-top:22px;">Web制作は普通、安い・早い・きれいのうち1つを諦めます。私たちは、AIに任せられる作業を増やして人の工数を減らし、その分をそのままデザインの密度と納期の短縮に使います。3つどれも妥協しません。</p>
     </div>
   </div>
